@@ -1,0 +1,33 @@
+{
+  "slug": "fairfield-inn",
+  "name": "FAIRFIELD INN & SUITES BY MARRIOTT",
+  "images": [
+    "/assets/images/fairfield_inn/ff 1.webp",
+    "/assets/images/fairfield_inn/IMG_0123 2022-04-01 15_33_19.jpg"
+  ],
+  "about": {
+    "headline": "Fairfield Inn & Suites, Memphis Germantown",
+    "subHeadline": "About Fairfield Inn & Suites, Memphis Germantown",
+    "content": [
+      "The Fairfield Inn & Suites is designed to meet the needs of both business and leisure visitors, whether they're looking to unwind after a long day of travel or stay productive while on the road. From the live music on Beale Street to Elvis Presley's Graceland, all this musical city has to offer is just minutes away.",
+      "Within five miles of Fairfield are the FedEx Global Headquarters, Baptist Hospital, Methodist Hospitals, ArgiCenter International, and the Mike Rose Soccer Complex, making your trip short."
+    ],
+    "image": "/assets/images/fairfield_inn/about.jpg",
+    "imageAlt": "about-image"
+  },
+  "room": {
+    "headline": "Rooms & Suites are Packed with Top-notch Amenities",
+    "content": [
+      "Relax and unwind on plush bedding made for a restful night's sleep. A mini fridge, coffeemaker, and microwave are among the amenities available in the guest rooms. You can stay connected with high-speed Internet/Wi-Fi and an ergonomic workspace, and streaming services expand your viewing options. Separate working and sleeping areas are provided in spacious suites, and fax and copy facilities are available for visitors' business needs.",
+      "Relax in a comfortable guest room or suite after a day of sightseeing in Memphis, take a dip in our heated indoor pool, or stay connected with our complimentary Wi-Fi. Enjoy a complimentary delicious breakfast and a cup of coffee in the morning."
+    ],
+    "image": "/assets/images/fairfield_inn/room.png",
+    "imageAlt": "room-image"
+  },
+  "reservationLink": "https://www.marriott.com/en-us/hotels/memfg-fairfield-inn-and-suites-memphis-germantown/overview/",
+  "meta": {
+    "description": "",
+    "keywords": "",
+    "title": ""
+  }
+}

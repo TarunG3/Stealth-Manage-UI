@@ -1,0 +1,37 @@
+{
+  "slug": "springhill-suites",
+  "name": "SPRINGHILL SUITES BY MARRIOTT",
+  "images": [
+    "/assets/images/springhill_suites/image1.png",
+    "/assets/images/springhill_suites/Double Queen Suite.jpg",
+    "/assets/images/springhill_suites/Extended King Suite.jpg",
+    "/assets/images/springhill_suites/King Desk Area.jpg",
+    "/assets/images/springhill_suites/King Suite.jpg",
+    "/assets/images/springhill_suites/Pull-Out Trundle Bed in Each Room.jpg"
+  ],
+  "about": {
+    "headline": "Springhill Suites Vernal",
+    "subHeadline": "About Springhill Suites Vernal",
+    "content": [
+      "The SpringHill Suites Vernal Utah is conveniently located near the oil and gas industries, as well as the Dinosaur National Monument and a variety of outdoor adventures. The Dinosaur National Monument is a 30-minute drive from the hotel. Vernal Golf Course is only a 5-minute drive from Springhill Suites, and numerous shops and restaurants are also nearby.",
+      "Springhill Suites Vernal is Uintah Basin's first choice for business travel or fun for the family. Treat yourself to spacious, stylish suites featuring complimentary Wi-Fi, separate sleeping and working areas, and Flat TVs.",
+      "Energize the morning with our complimentary daily breakfast and hearty favorites, or maintain your health in the well-lit, well-equipped fitness center."
+    ],
+    "image": "/assets/images/springhill_suites/about.jpg",
+    "imageAlt": "about-image"
+  },
+  "room": {
+    "headline": "Rooms & Suites are Packed with Top-notch Amenities",
+    "content": [
+      "Each room has a mini-fridge, microwave, and separate work and living area with free WiFi. The dining options include BBQ/picnic areas, a complimentary hot breakfast buffet, and a sundries store. Relax in our indoor pool and hot tub after a workout in our 24-hour fitness center. Enjoy Vernal's lovely weather in our outdoor pool or gather around the firepit in comfy, plush discussion areas."
+    ],
+    "image": "/assets/images/springhill_suites/room.png",
+    "imageAlt": "room-image"
+  },
+  "reservationLink": "https://www.marriott.com/en-us/hotels/velsh-springhill-suites-vernal/overview/",
+  "meta": {
+    "description": "",
+    "keywords": "",
+    "title": ""
+  }
+}

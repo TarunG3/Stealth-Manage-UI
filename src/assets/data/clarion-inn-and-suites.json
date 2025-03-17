@@ -1,0 +1,34 @@
+{
+  "slug": "clarion-inn-and-suites",
+  "name": "CLARION INN AND SUITES BY CHOICE UNIVERSAL MAINGATE",
+  "images": [
+    "/assets/images/clarion_inn/lobby.jpg",
+    "/assets/images/clarion_inn/Clarion Front Desk.jpg",
+    "/assets/images/clarion_inn/Lobby 2.jpg"
+  ],
+  "about": {
+    "headline": "Clarion Inn & Suites, Orlando",
+    "subHeadline": "About Clarion Inn & Suites, Orlando",
+    "content": [
+      "Clarion Inn & Suites by Choices Hotels is ideal whether travelling for business or pleasure. Universal Studios Orlando is located 1.7 km from Clarion Inn & Suites. The hotel is conveniently located near International Drive so that you can reach Fun Spot America, Orlando, and Titanic: The Artifact Exhibition in about 10 minutes.",
+      "Each room and suite are thoughtfully designed and offers fully equipped living/working areas, premium bedding, large flat-screen television and more. The rooms feature modern-style decor and private bathrooms with a hairdryer, a bathtub and towels."
+    ],
+    "image": "/assets/images/clarion_inn/about.png",
+    "imageAlt": "about-image"
+  },
+  "room": {
+    "headline": "Rooms & Suites are Packed with Top-notch Amenities",
+    "content": [
+      "The newly renovated rooms and suites are packed with amenities, including refrigerators and coffee makers. After a long day of exploring the theme parks, unwind by the outdoor pool, in the hot tub, or at one of our restaurants or bars. The hotel features an on-site Roast café & Tabla restaurant and lobby bar.",
+      "Stay connected with complimentary Wi-Fi throughout the hotel. At the on-site restaurant and bar, you may grab a bite to eat and a refreshing drink. Clarion Inn & Suites also provides a free scheduled shuttle service to Universal Orlando. Friendly reception and free parking are among the additional perks."
+    ],
+    "image": "/assets/images/clarion_inn/room.png",
+    "imageAlt": "room-image"
+  },
+  "reservationLink": "https://www.choicehotels.com/florida/orlando/clarion-hotels/flc78",
+  "meta": {
+    "description": "",
+    "keywords": "",
+    "title": ""
+  }
+}

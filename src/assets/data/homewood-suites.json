@@ -1,0 +1,34 @@
+{
+  "slug": "homewood-suites",
+  "name": "HOMEWOOD SUITES BY HILTON",
+  "images": [
+    "/assets/images/homewood_suites/hh7.webp",
+    "/assets/images/homewood_suites/_DSC0022_3_4.jpg",
+    "/assets/images/homewood_suites/_DSC0148_49_50.jpg",
+    "/assets/images/homewood_suites/_DSC0373_4_5.jpg"
+  ],
+  "about": {
+    "headline": "Homewood Suites Memphis Germantown ",
+    "subHeadline": "About Homewood Suites Memphis Germantown",
+    "content": [
+      "Homewood Suites is close to the interstate and offers easy access to the best of Memphis. It boasts fully-furnished kitchens, a 24-hour fitness center, and a complimentary evening social on weeknights. Located in Germantown, Tennessee provides complimentary shuttle service within an 8-kilometer radius of Memphis International Airport.",
+      "The Homewood Suites is 29 km from Graceland. The Memphis Zoo is 20.9 km distant, while the hotel is 32.2 km from downtown Memphis."
+    ],
+    "image": "/assets/images/homewood_suites/about.jpg",
+    "imageAlt": "about-image"
+  },
+  "room": {
+    "headline": "Rooms & Suites are Packed with Top-notch Amenities",
+    "content": [
+      "Homewood Suites provides a complimentary daily breakfast. Guests can enjoy an outdoor pool and a spacious grill area. Homewood Suites by Hilton Memphis, Germantown, is pet-friendly and welcomes furry friends. Every suite also has Serta Suite Dreams(R) bedding for comfortable sleep, flat TV, and free Wi-Fi. Each suite also includes a microwave, refrigerator, and coffee machine."
+    ],
+    "image": "/assets/images/homewood_suites/room.png",
+    "imageAlt": "room-image"
+  },
+  "reservationLink": "https://www.hilton.com/en/hotels/memgthw-homewood-suites-memphis-germantown/",
+  "meta": {
+    "description": "",
+    "keywords": "",
+    "title": ""
+  }
+}

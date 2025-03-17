@@ -1,0 +1,123 @@
+.detail {
+  &-container {
+    @apply flex flex-col w-full;
+
+    img {
+      width: 100%;
+      height: 320px;
+    }
+  }
+
+  &-expert {
+    @apply flex px-3.5 flex-col justify-center text-center;
+
+    &-name {
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 32px;
+      color: #192A56;
+      margin-bottom: 8px;
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      color: #656565;
+      margin-bottom: 8px;
+    }
+
+    &-description {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 32px;
+      color: #656565;
+      margin-bottom: 40px;
+    }
+
+    &-signature {
+      font-family: 'Creattion Demo', serif;
+      font-weight: 400;
+      font-size: 84px;
+      line-height: 32px;
+      color: #192A56;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@screen md {
+  .detail {
+    &-container {
+      @apply flex flex-col items-center content-center w-full mt-[30px] px-[25px];
+      min-height: 879px;
+
+      img {
+        width: 302px;
+        height: 402px;
+        margin-bottom: 30px;
+      }
+    }
+
+    &-expert {
+      @apply ml-0 mr-0 items-center content-center text-center;
+
+      &-name {
+        margin-bottom: 15px;
+      }
+
+      &-title {
+        margin-bottom: 16px;
+      }
+
+      &-description {
+      }
+
+      &-signature {
+      }
+    }
+  }
+}
+
+@screen xl {
+  .detail {
+    &-container {
+      @apply flex flex-row w-full items-start content-start justify-start px-0 mt-0;
+
+      img {
+        width: 424px;
+        height: 566px;
+      }
+    }
+
+    &-expert {
+      @apply flex flex-col ml-[70px] mr-[110px] pt-[105px] justify-start items-start content-start text-left;
+
+      &-name {}
+
+      &-title {}
+
+      &-description {}
+
+      &-signature {}
+    }
+  }
+}
+
+@screen md {
+  ::ng-deep .modal-detail {
+    max-width: 700px;
+    margin: auto;
+  }
+}
+
+@screen xl {
+  ::ng-deep .modal-detail {
+    max-width: 1287px;
+    margin: auto;
+
+    & > .modal-content {
+      max-height: 570px;
+    }
+  }
+}

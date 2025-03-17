@@ -1,0 +1,271 @@
+.navbar {
+  @apply w-full absolute left-0 top-0 px-[15px] z-10 overflow-hidden;
+  background: linear-gradient(180deg, #000000 0%, rgba(25, 42, 86, 0.278407) 66.58%, rgba(23, 23, 23, 0) 89.73%);
+  min-height: 100px;
+  --bs-gutter-x: 0px;
+
+  &.expanded {
+    background: #08090C;
+    height: unset;
+
+    ::ng-deep & .nav-link {
+      color: white !important;
+    }
+  }
+
+  &-sticky {
+    @apply fixed top-0 min-h-[86px] h-[86px] z-50;
+    background: white;
+    box-shadow: 0 0 14px 16px rgb(0 0 0 / 8%);
+  }
+
+  &-logo {
+          ::ng-deep svg {
+      width: 146px;
+      height: 46px;
+    }
+  }
+
+  &-toggler {
+    width: 36px;
+    height: 36px;
+    background: #C2D5E6;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    padding: unset;
+    outline: none;
+  }
+}
+
+.expanded {
+  @apply mb-0 pb-0;
+  background: #08090C;
+  & .nav-item:not(.hidden) {
+    @apply flex content-center items-center min-h-[51px];
+
+    &:not(.contact-us) {
+      border-bottom: 1px solid #535353;
+    }
+
+    .active {
+      text-decoration: unset;
+    }
+  }
+}
+
+.nav-item {
+  a {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 17px;
+    color: #FFFFFF;
+  }
+
+  .active {
+    @apply underline underline-offset-[16px];
+  }
+}
+
+@screen md {
+  .navbar {
+    @apply px-10;
+    min-height: 120px;
+    --bs-gutter-x: unset;
+
+    &-sticky {
+      @apply fixed top-0 min-h-[86px] h-[86px] z-50;
+      background: white;
+      box-shadow: 0 0 14px 16px rgb(0 0 0 / 8%);
+    }
+
+    &-logo {
+      ::ng-deep svg {
+        width: 150px;
+        height: 62px;
+      }
+    }
+
+    &-toggler {
+      width: 36px;
+      height: 36px;
+      background: #C2D5E6;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 4px;
+      padding: unset;
+      outline: none;
+    }
+  }
+
+  .nav-item {
+    a {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 17px;
+      color: #FFFFFF;
+    }
+
+    .active {
+      @apply underline underline-offset-[16px];
+    }
+  }
+}
+
+@screen lg {
+  .navbar {
+    @apply px-10;
+    min-height: 120px;
+
+    .collapse.navbar-collapse {
+      @apply justify-end;
+    }
+
+    &-sticky {
+      @apply fixed top-0 min-h-[86px] h-[86px] z-50;
+      background: white;
+      box-shadow: 0 0 14px 16px rgb(0 0 0 / 8%);
+
+      a:not(.button) {
+        color: #192A56;
+      }
+    }
+
+    &-logo {
+        ::ng-deep svg {
+      }
+    }
+  }
+
+  .navbar-nav {
+    @apply gap-x-[0px] items-center;
+  }
+
+  .nav-item {
+    a {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 17px;
+      color: #FFFFFF;
+    }
+
+    .active {
+      @apply underline underline-offset-[16px];
+    }
+  }
+}
+
+@screen xl {
+  .navbar {
+    .collapse.navbar-collapse {
+    }
+
+    &-sticky {
+
+      a {
+      }
+    }
+
+    &-logo {
+      ::ng-deep svg {
+        width: 185px;
+    height: 62px;
+      }
+    }
+  }
+
+  .navbar-nav {
+    @apply gap-x-[6px];
+  }
+
+  .nav-item {
+    a {
+    }
+
+    .active {
+        }
+      }
+    }
+  
+  @screen xxl {
+  .navbar {
+    @apply px-[110px];
+    .collapse.navbar-collapse {
+    }
+
+    &-sticky {
+
+      a {
+      }
+    }
+
+    &-logo {
+        ::ng-deep svg {
+      }
+    }
+  }
+  
+  .navbar-nav {
+    @apply gap-x-[20px];
+  }
+  
+  .nav-item {
+    a {
+    }
+  
+    .active {
+    }
+  }
+}
+  
+    .button {
+  @apply flex flex-row justify-center items-center px-[12px];
+      background: #192A56;
+      border: 1px solid #B0B0B0;
+      border-radius: 4px;
+  height: 45px;
+      color: white;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 21px;
+}
+
+@media(min-width: 768px){
+  .navbar {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+}
+@media (min-width: 1400px){
+  .nav-item a{
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .banner-image-text{
+    font-size: 50px !important;
+  }
+  
+}
+@media (min-width: 1023px){
+.navbar {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    min-height: 120px;
+}
+}
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-nav {
+    column-gap: 2px;
+}
+.navbar-sticky a:not(.button) {
+  color: #192A56;
+}
+.navbar-nav {
+  align-items: center;
+}
+}
+
+@media(max-width: 992px){
+  li.nav-item.hidden.lg\:list-item {
+    margin-bottom: 10px;
+}
+}

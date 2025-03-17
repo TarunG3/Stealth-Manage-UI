@@ -1,0 +1,35 @@
+<div class="portfolio-container">
+    <div class="portfolio-banner wow zoomIn mb-4">
+        <div class="portfolio-banner-description">
+            <!-- <div class="portfolio-banner-description-title">Services</div> -->
+            <div>
+                <h1 class="portfolio-banner-description-title"> Hotel Management Services</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="py-2">
+            <article *ngFor="let elem of servicesData" class="services light blue">
+                <span class="services__img_link">
+                    <img class="services__img" [src]="elem?.image?.imageUrl" [alt]="elem?.image?.altText" />
+                </span>
+                <div class="services__text t-dark">
+                    <h2 class="services__title blue">{{elem?.title}}</h2>
+                    <!-- <div class="services__subtitle small">
+                        <span>Nov 1 2022</span>
+                    </div> -->
+                    <div class="services__bar"></div>
+                    <div class="services__preview-txt">{{elem?.description}}</div>
+                    <!-- <ul class="services__tagbox">
+                            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                            <li class="tag__item play blue">
+                                <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                            </li>
+                        </ul> -->
+                </div>
+            </article>
+        </div>
+    </div>
+</div>

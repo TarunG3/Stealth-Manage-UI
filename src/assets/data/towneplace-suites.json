@@ -1,0 +1,33 @@
+{
+  "slug": "towneplace-suites",
+  "name": "TOWNEPLACE SUITES BY MARRIOTT",
+  "images": [
+    "/assets/images/townplace_suites/MicrosoftTeams-image (1) (1).png",
+    "/assets/images/townplace_suites/double queen suite.jpg"
+  ],
+  "about": {
+    "headline": "TownePlace Suites Vernal",
+    "subHeadline": "About TownePlace Suites Vernal",
+    "content": [
+      "During your work or leisure trip, rest peacefully at TownePlace Suites Vernal. Our extended-stay hotel is conveniently located near the gas and oil industry, making business travel a breeze.",
+      "Visit the family-friendly Dinosaur National Monument and Salt Lake City, or go rafting, fishing, or swimming in the great outdoors. Our pet-friendly hotel in the Uinta Basin, with easy access to Highway 40, offers complimentary hot breakfasts, an indoor pool, and a hot tub to moving families, business travelers, and other visitors."
+    ],
+    "image": "/assets/images/townplace_suites/about.png",
+    "imageAlt": "about-image"
+  },
+  "room": {
+    "headline": "Rooms & Suites are Packed with Top-notch Amenities",
+    "content": [
+      "The TownePlace Suites offer studio, one, and two-bedroom suites with fully outfitted kitchens and designated living, working, and sleeping areas. Guests may work and relax on their own terms in modern suites with full kitchens with appliances and stovetops, adjustable work spaces with built-in shelves and lighting, a flat-screen television, and comfortable beds.",
+      "An outdoor pool, a 24-hour fitness center, a conference room, laundry facilities, and complimentary Wi-Fi are among the hotel's other features. TownePlace Suites understands that families are made up of more than just humans, so the TownePlace Suites Vernal is pet-friendly (fees apply)."
+    ],
+    "image": "/assets/images/townplace_suites/room.png",
+    "imageAlt": "room-image"
+  },
+  "reservationLink": "https://www.marriott.com/en-us/hotels/velts-towneplace-suites-vernal/overview/",
+  "meta": {
+    "description": "",
+    "keywords": "",
+    "title": ""
+  }
+}

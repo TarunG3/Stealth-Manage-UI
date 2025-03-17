@@ -1,0 +1,117 @@
+<div class="portfolio-container">
+    <div class="portfolio-banner wow zoomIn">
+        <div class="portfolio-banner-description">
+            <div class="portfolio-banner-description-title">
+                <h1>Join Us</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row my-5 d-flex justify-content-center align-items-center">
+            <div class="col-md-8">
+                <div class="search">
+                    <i class="fa fa-search"></i>
+                    <input [formControl]="search" type="text" class="form-control" placeholder="Looking for a job?">
+                    <!-- <button class="btn btn-primary">Search</button> -->
+                    <div *ngIf="isSearching" class="spinner-border spinner" role="status">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="isDataLoaded" class="row">
+            <div *ngFor="let elem of joinUsData" class="col-lg-4 col-md-6 col-sm-6">
+                <div class="category pb-4">
+                    <div class="job">
+                        <span [class]="elem.color + ' mb-4'">{{elem?.title}}</span>
+                        <h5><a>{{elem?.name}}</a></h5>
+                        <ul class="place">
+                            <li *ngFor="let item of elem.jobDescription | joinUs">
+                                <p><i class="pe-2"></i>{{item}}</p>
+                            </li>
+                        </ul>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="left">
+                                <p>{{elem?.componanyName}}</p>
+                            </div>
+                            <a class="join-us cursor-pointer" (click)="onApplyJob(elem)">Join Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="isDataLoaded && !this.joinUsData.length" class="text-center row justify-content-center mb-5 pb-5">
+            <div class=" col-md-6">
+                <img src="https://cdn.pixabay.com/photo/2017/03/09/12/31/error-2129569__340.jpg" alt=""
+                    class="img-fluid">
+            </div>
+            <div class=" col-md-6 mt-5 justify-content-center align-self-center">
+                <p class="fs-3"> The search <span class="text-danger">{{this.search.value}}, </span>did not match any
+                    jobs.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button hidden #modal type="button" class="btn btn-primary" data-bs-toggle="modal"
+    data-bs-target="#staticBackdrop"></button>
+<div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content pt-5">
+
+            <div class="container-fluid text-center">
+
+                <h2>{{selectedJob?.name}}</h2>
+
+                <button #closeModal style="position: absolute;right: 15px;top: 10px;" type="button"
+                    class="btn-close py-2" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <div class="row align-items-center">
+
+                    <form #form_join_us="ngForm" class="w-100 my-2 px-3" [formGroup]="contactForm"
+                        (ngSubmit)="submitForm()">
+                        <div class="contact-banner-card-form">
+                            <ng-container formGroupName="name">
+                                <input formControlName="firstName" type="text" class="d-block form-control my-2"
+                                    placeholder="Your Name *" aria-label="Your Name" aria-describedby="User Full name">
+                            </ng-container>
+
+                            <ng-container formGroupName="contact">
+                                <input formControlName="email" type="email" class="form-control my-2"
+                                    placeholder="Email Address *" aria-label="Email Address"
+                                    aria-describedby="email-address">
+                            </ng-container>
+
+                            <ng-container>
+                                <button (click)="uploadResume.click()" type="button"
+                                    class="w-100 d-block btn btn-primary mt-2 mb-3">Upload Resume</button>
+                                <input (change)="onSelectedResume($event)"
+                                    accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document, .pdf"
+                                    hidden #uploadResume type="file" />
+                            </ng-container>
+
+                            <textarea rows="7" formControlName="message" type="text" class="form-control my-2"
+                                placeholder="Your Message *" aria-label="Message" aria-describedby="message"></textarea>
+                            <button type="submit" class="submit w-100 btn btn-primary mt-2 mb-3">SUBMIT</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 99999">
+
+    <div #liveToast id="toast" class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            Please fill all required fields!
+              </div>
+          <!-- <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button> -->
+        </div>
+      </div>
+</div>

@@ -1,0 +1,170 @@
+<div *ngIf="api.isPlatformBrowser" class="home-container" id="home">
+  <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false">
+    <ng-template ngbSlide *ngFor="let image of bannerImages">
+      <img class="home-banner" [src]="image" [alt]="image">
+      <div class="position-absolute top-50 start-50 translate-middle text-center banner-text">
+        <span class="banner-image-text">Stealth Management Group LLC</span>
+        <!-- <h1 class="banner-image-heading">Best-in-Class Hospitality Management Company</h1> -->
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  <a class="home-banner-scroll-down wow slideInUp" inlineSVG="/assets/icons/scroll.svg" [cacheSVG]="true"
+    href="#experience"></a>
+
+  <div class="home-banner-card container-qxl wow slideInUp">
+    <h1 class="home-banner-card-heading">Best-in-Class Hospitality Management Company</h1>
+    <span class="dark-underline"></span>
+
+    <p>With close to 40 years of combined hospitality management experience, Stealth Management Group breathes new life
+      into faltering properties. With a specialization in property renovation, we know how to take things to the next
+      level, a level that guests desire and want to be a part of. Our innovative programs and combination of recreating
+      spaces to attract more profit are the result of years of impeccable service.</p>
+    <p class="mt-2">You can confidently count on Stealth Management Group, one of the trusted Hospitality Management
+      Companies in the
+      United States, to successfully manage, grow, and develop your hotel or enact a successful renovation program to
+      convert your hotel into the kind of property that other hotels envy.</p>
+    <p class="mt-2">Stealth Management Group brings dynamic energy to hospitality investment and hotel management. For
+      both new and
+      existing properties, we provide a complete range of services, including management, development, repositioning and
+      acquisitions. To achieve the highest levels of customer satisfaction and financial returns, we are dedicated to
+      the profitability of every project. Having been in the business for 17+ years, we have developed strong
+      relationships with the brands that have helped us grow. Since we firmly believe in working smarter, not only
+      harder, our company has numerous procedures and operational efficiency in place for a business of its scale to
+      ensure smooth operations.</p>
+    <p class="mt-2">If you're looking for a hands-on approach with complete transparency, Stealth Management Group is
+      the company for
+      you. We are a growing business that strategically invests in the right infrastructure and systems needed to
+      support a successful operation.</p>
+
+      <a href="/hotel-management-services" target="_blank" class="btn button mt-4">More about
+        our services</a>
+  </div>
+
+  <div class="home-experience container-qxl" id="experience">
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-6">
+        <div class="home-experience-card wow fadeIn">
+          <h2 class="home-banner-card-heading">{{homeData?.title}}</h2>
+          <span class="dark-underline"></span>
+          <p *ngFor="let paragraph of homeData?.description" class="text">
+            {{paragraph}}
+          </p>
+          <a href="/about-us" target="_blank" class="btn button mt-4 mobile-view">Learn more about us</a>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3">
+      
+        <div class="welcome-image">
+          <img class="wow zoomInLeft detail-image" data-wow-duration="2s" [src]="homeData?.['image']?.['imageUrl']"
+            [alt]="homeData?.['image']?.['altText']"> 
+            <img class="wow zoomInLeft detail-image" data-wow-duration="2s" [src]="homeData?.['image3']?.['imageUrl']"
+              [alt]="homeData?.['image3']?.['altText']"> 
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="welcome-image">
+        <div class="empty-space" style="height: 40px;"></div>
+          <img class="wow zoomInLeft detail-image" data-wow-duration="2s" [src]="homeData?.['image2']?.['imageUrl']"
+            [alt]="homeData?.['image2']?.['altText']"> 
+            <img class="wow zoomInLeft detail-image" data-wow-duration="2s" [src]="homeData?.['image4']?.['imageUrl']"
+              [alt]="homeData?.['image4']?.['altText']"> 
+        </div>
+      </div>
+
+
+
+      <div class="destop-none">
+        <h2 class="home-banner-card-heading"> <a href="/about-us" target="_blank" class="btn button mt-4">Learn more about us</a></h2>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="recent-works" id="our-work">
+    <div class="recent-works-header container-qxl">
+      <div class="recent-heading">
+      <h2 class="home-banner-card-heading text-white">
+        Our Recent Works
+      </h2>
+        <span class="light-underline"></span>
+      </div>
+      <div routerLink="/our-portfolio" class="recent-works-see-all cursor-pointer">
+        <span>See All</span>
+        <span inlineSVG="/assets/icons/next.svg" [cacheSVG]="true"></span>
+      </div>
+    </div>
+
+    <div class="recent-works-image-container">
+      <div class="recent-works-image wow slideInUp" [attr.data-wow-delay]="(i * 0.5) + 's'"
+        *ngFor="let work of properties; let i = index">
+        <img [src]="work?.images?.[0]?.imageUrl" [alt]="work?.images?.[0]?.altText">
+        <a class="recent-works-image-name" [routerLink]="'/property/' + work.slug">
+          {{ work.name }}
+          <!-- <span class="dark-next" inlineSVG="/assets/icons/next.svg" [cacheSVG]="true"></span> -->
+        </a>
+      </div>
+    </div>
+
+    <div routerLink="/our-portfolio" class="recent-works-see-all-sm">
+      <span>See All</span>
+      <span inlineSVG="/assets/icons/next.svg" [cacheSVG]="true"></span>
+    </div>
+  </div>
+
+  <div class="our-founder container-qxl">
+      <div class="Our-founder-img">
+    <img lazyLoad="assets/images/anshu-jain.png" alt="Anshu jain" class="our-founder-image">
+  </div>
+    <div class="our-founder-content">
+      <div class="our-founder-header">
+        <div class="home-banner-card-heading">Words From The Founder</div>
+        <span class="dark-underline"></span>
+      </div>
+      <span class="our-founder-name">Anshu Jain</span>
+      <span class="our-founder-title">President & CEO</span>
+      <span class="our-founder-description">
+        "Perfection in the Pillars of Management" For over 17 years, Stealth Management Group, LLC. has been creating
+        value for our stakeholders through operating premium real estate assets. We are focused on conservative growth
+        with core values of leadership, teamwork, innovation, culture, communication, and "Customer Obsession". We
+        believe in the fundamentals of Business Agility; speed to market, ability to grow, flexibility to evolve! We are
+        leaders in the business of management with a proven track record of success.
+      </span>
+
+      <span inlineSVG="/assets/images/signatures/anshu_jain.svg" class="our-founder-signature" [cacheSVG]="true"></span>
+    </div>
+  </div>
+</div>
+
+<button hidden #modal type="button" class="btn btn-primary" data-bs-toggle="modal"
+  data-bs-target="#staticBackdrop"></button>
+<div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="container-fluid">
+        <button style="position: absolute;right: 15px;top: 10px;" type="button" class="btn-close"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+
+        <div class="row align-items-center">
+          <div class="col-lg-7 col-md-12 col-sm-12 m-0 p-0">
+            <img style="
+            width: 100%;
+            object-fit: cover;
+        " [src]="promotionData?.image?.imageUrl" [alt]="promotionData?.image?.altText">
+          </div>
+          <div class="col-lg-5 col-md-12 col-sm-12 text-center py-2">
+
+            <h3 class="pb-2">{{promotionData?.title}}</h3>
+            <p class="pb-2">{{promotionData?.description}}</p>
+            <a style="display: inline-flex" [href]="promotionData?.path?.url"
+              [target]="promotionData?.path?.isInternal ? '_self' : '_blank'" class="reservation-link">View</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "CLARION INN AND SUITES BY CHOICE UNIVERSAL MAINGATE...",
+    "slug": "clarion-inn-and-suites",
+    "image": "/assets/images/portfolio/clarion_inn.png"
+  },
+  {
+    "id": 2,
+    "name": "FAIRFIELD INN & SUITES BY MARRIOTT...",
+    "slug": "fairfield-inn",
+    "image": "/assets/images/portfolio/fairfield_inn.png"
+  },
+  {
+    "id": 3,
+    "name": "HOMEWOOD SUITES BY HILTON...",
+    "slug": "homewood-suites",
+    "image": "/assets/images/portfolio/homewood_suites.png"
+  },
+  {
+    "id": 4,
+    "name": "QUALITY INN AND SUITES BY CHOICE...",
+    "slug": "quality-inn",
+    "image": "/assets/images/portfolio/quality_inn.png"
+  },
+  {
+    "id": 5,
+    "name": "SPRINGHILL SUITES BY MARRIOTT...",
+    "slug": "springhill-suites",
+    "image": "/assets/images/portfolio/springhill_suites.png"
+  },
+  {
+    "id": 6,
+    "name": "TOWNEPLACE SUITES BY MARRIOTT...",
+    "slug": "townplace-suites",
+    "image": "/assets/images/portfolio/townplace_suites.png"
+  },
+  {
+    "id": 7,
+    "name": "Tabla Lake Nona...",
+    "slug": "tabla-lake-nona",
+    "image": "/assets/images/portfolio/tabla_lake.png"
+  },
+  {
+    "id": 8,
+    "name": "Tabla Orlando...",
+    "slug": "tabla-orlando",
+    "image": "/assets/images/portfolio/tabla_orlando.png"
+  },
+  {
+    "id": 9,
+    "name": "Tabla Winter Park...",
+    "slug": "tabla-winter-park",
+    "image": "/assets/images/portfolio/tabla_winter_park.png"
+  }
+]

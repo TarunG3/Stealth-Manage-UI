@@ -1,0 +1,167 @@
+.footer {
+  @apply flex flex-col bg-[#252525] content-center items-center;
+
+  & * {
+    font-size: 14px;
+    color: #F8F8F8;
+  }
+
+  &-main {
+    @apply flex flex-col w-full px-4 pt-[50px] pb-[35px];
+    border-bottom: 1px solid #535353;
+
+    &-logo {
+      @apply flex mb-6;
+      ::ng-deep svg {
+        height: 52.72px;
+        width: 168px;
+      }
+    }
+
+    &-info {
+      @apply flex flex-col justify-center w-full;
+
+      &-contact {
+        @apply flex flex-col gap-x-2;
+
+        .tile {
+          @apply flex flex-row content-start items-start;
+        }
+
+        .content {
+          @apply ml-3;
+          font-size: 14px;
+          line-height: 28px;
+        }
+      }
+
+      .sister-properties-text {
+        @apply mb-1.5 mt-4 opacity-90;
+        line-height: 20px;
+        font-weight: 700;
+      }
+
+      .sister-properties-name {
+        @apply opacity-90 mt-4;
+        line-height: 20px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &-copyright {
+    @apply flex flex-row text-center py-6 opacity-60 px-8;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@screen md {
+  .footer {
+    & * {
+      font-size: 14px;
+    }
+
+    &-main {
+      @apply flex flex-col w-full mx-[50px] py-[50px];
+
+      &-logo {
+        ::ng-deep svg {
+          height: 54.6px;
+          width: 174px;
+        }
+      }
+
+      &-info {
+        @apply items-center content-center;
+        &-contact {
+          @apply flex-row;
+          .tile {
+            @apply content-center items-center;
+          }
+
+          .content {
+            font-size: 14px;
+            line-height: 28px;
+          }
+        }
+
+        .sister-properties-text {
+        }
+
+        .sister-properties-name {
+        }
+      }
+    }
+
+    &-copyright {
+    }
+  }
+}
+
+
+@screen lg {
+  .footer {
+    & * {
+      font-size: 16px;
+    }
+
+    &-main {
+      @apply flex-row w-10/12 mx-[50px] py-[50px];
+
+      &-logo {
+        @apply flex justify-start mb-0;
+        ::ng-deep svg {
+          height: 71px;
+          width: 226px;
+        }
+      }
+
+      &-info {
+        @apply items-end content-end;
+        &-contact {
+          @apply flex-row;
+          .tile {
+
+            &:first-child {
+              margin-right: 40px;
+            }
+          }
+
+          .content {
+            font-size: 16px;
+            line-height: 40px;
+          }
+        }
+
+        .sister-properties-text {
+        }
+
+        .sister-properties-name {
+        }
+      }
+    }
+
+    &-copyright {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+.margin-right-auto {
+  margin-right: auto;
+}
+
+.margin-left-auto {
+  margin-left: auto;
+}
+
+
+@media(max-width: 768px){
+  .footer-main-logo{
+    justify-content: center;
+  }
+}

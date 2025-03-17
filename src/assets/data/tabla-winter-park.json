@@ -1,0 +1,24 @@
+{
+  "slug": "tabla-winter-park",
+  "name": "TABLA WINTER PARK",
+  "images": [
+    "/assets/images/tabla_winter_park/Tabla WP.jpg"
+  ],
+  "about": {
+    "headline": "Tabla Indian Restaurant Winter Park",
+    "subHeadline": "Tabla Indian Restaurant Winter Park, an authentic Indian diner in the city!",
+    "content": [
+      "Tabla Restaurant, Park Avenue in Winter Park, is a go-to destination for lovers of Indian cuisine. Tabla featuring Indian, Indian-Chinese, and Thai cuisine has taken the traditional recipes and enhanced them with a modern approach.",
+      "This is the perfect place to reserve for your next special meal, with a fascinating ambiance, new interpretations, and amazing flavor combinations! Tabla's success can be attributed to superb food prepared by enthusiastic chefs. Tabla has taken traditional recipes and improved them with a modern twist over the years. Everything on their menu is capable of pleasing your taste buds."
+    ],
+    "image": "/assets/images/tabla_winter_park/Tabla wp2.jpg",
+    "imageAlt": "about-image"
+  },
+  "extraInfo": "The staff is friendly, smart, and super active. Being polite and kind, the staff are available at your service all the time. Tabla Restaurant has 50+ specialized dishes on its menu if you're seeking an authentic Indian fine dining experience. The traditional Indian restaurant focuses on ambience and authenticity, customer service, and world-class cuisine, with alternatives to suit every taste and occasion.",
+  "reservationLink": "https://www.toasttab.com/tabla-cuisine-park-ave-216-n-park-avenue-suite-h/",
+  "meta": {
+    "description": "Tabla Indian Restaurant Winter Park partner with Stealth management group is the most authentic Indian diner in the city.",
+    "keywords": "",
+    "title": "Tabla Indian Restaurant Winter Park"
+  }
+}

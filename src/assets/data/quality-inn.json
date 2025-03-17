@@ -1,0 +1,35 @@
+{
+  "slug": "quality-inn",
+  "name": "QUALITY INN AND SUITES BY CHOICE",
+  "images": [
+    "/assets/images/quality_inn/QI3.png",
+    "/assets/images/quality_inn/flf65bkfast1.jpg",
+    "/assets/images/quality_inn/flf65bkfast3.jpg",
+    "/assets/images/quality_inn/flf65lobby2.jpg"
+  ],
+  "about": {
+    "headline": "Quality Inn & Suites Lehigh Acres Fort Myers",
+    "subHeadline": "About Quality Inn & Suites Lehigh Acres Fort Myers",
+    "content": [
+      "Quality Inn & Suites hotel in Lehigh Acres is in a convenient location between Southwest Florida International Airport and the Lehigh Regional Medical Center, making it an excellent base for visiting local sites, activities, and attractions. This hotel is only 22.4 km from the Imaginarium Hands-On Museum. Apart from this, it takes about 30 minutes to drive to the Southwest Florida International Airport.",
+      "The rooms are thoughtfully designed and equipped with comfortable beds and plush pillows for optimum sleep. Each room at the Quality Inn & Suites includes a spacious work desk and a clock radio"
+    ],
+    "image": "/assets/images/quality_inn/about.png",
+    "imageAlt": "about-image"
+  },
+  "room": {
+    "headline": "Rooms & Suites are Packed with Top-notch Amenities",
+    "content": [
+      "Whether you're traveling for work or pleasure, alone or with family, Quality Inn & Suites has everything you need to make your vacation a success. Begin your day with a free cup of coffee and complimentary hot breakfast, which includes a variety of healthy selections. Stay connected with complimentary WiFi throughout your stay, and if you're here for business, take advantage of the conference room and copy, print, and fax services. Relax in the outdoor pool or have a delicious meal at the on-site restaurant and bar.",
+      "The hotel has comfortable guest rooms that are equipped with flat-screen TVs, refrigerators, coffee makers, hair dryers, irons, and ironing boards. A microwave is also included in each of the suites."
+    ],
+    "image": "/assets/images/quality_inn/room.png",
+    "imageAlt": "room-image"
+  },
+  "reservationLink": "https://www.choicehotels.com/florida/lehigh-acres/quality-inn-hotels/flf65?mc=llyxyxpx",
+  "meta": {
+    "description": "",
+    "keywords": "",
+    "title": ""
+  }
+}

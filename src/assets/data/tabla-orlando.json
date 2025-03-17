@@ -1,0 +1,24 @@
+{
+  "slug": "tabla-orlando",
+  "name": "TABLA ORLANDO",
+  "images": [
+    "/assets/images/tabla_orlando/Tabla O.png"
+  ],
+  "about": {
+    "headline": "Tabla Indian Restaurant Orlando",
+    "subHeadline": "Tabla Indian Restaurant Orlando is one of the finest diners in Florida",
+    "content": [
+      "Tabla Indian Restaurant Orlando is the finest Indian restaurant that serves delicious Indian delicacies in a refined ambiance. The lovely atmosphere and impeccable service are winners, along with a superb range of Indo-Chinese, Vegan, and Thai options to suit all palates. The freshness of ingredients and a perfect blend of spices in every dish prepared at Tabla make it stand out amongst the host of competitors in the area.",
+      "The Tabla restaurants have formed a ground-breaking strategic alliance to broaden their reach and provide more experiences to guests across Florida. Tabla Cuisine Restaurant Orlando location has a giant ballroom, which boasts great design, and can accommodate up to 200 guests at once. It is open in two more locations: Winter Park and Lake Nona. They cater to all needs, offering gluten-free and vegan dishes for lovers of meat-free living styles. Proudly recognized as Orlando’s Best Indian Restaurant by TripAdvisor 2019 Certificate of Excellence Award and Orlando sentinel foodie awards 2022."
+    ],
+    "image": "/assets/images/tabla_orlando/TablaO.jpg",
+    "imageAlt": "about-image"
+  },
+  "extraInfo": "The excellent warm setting has been developed with various elements of surprise to relax you from the core. Their friendly service stands out every time you visit this lovely place. The staff is very warm and attentive, ensuring that you have a memorable dining experience here. Moreover, the waiters are extremely helpful in making the right selection to suit your tastes.",
+  "reservationLink": "https://www.toasttab.com/tabla-cuisine-grand-national-5847-grand-national-dr/",
+  "meta": {
+    "description": "Tabla Indian Restaurant Orlando partnered with Stealth Management Group and is one of the finest & authentic diners in Florida.",
+    "keywords": "",
+    "title": "Tabla Indian Restaurant Orlando"
+  }
+}

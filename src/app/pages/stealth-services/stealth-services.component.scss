@@ -1,0 +1,554 @@
+::ng-deep html,
+body {
+    @apply bg-white;
+}
+
+.portfolio {
+    &-container {
+        @apply bg-white;
+    }
+
+    &-banner {
+        @apply relative;
+        height: 343px;
+        background-image: url("/assets/images/service-banner.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-position: center;
+        object-fit: cover;
+        background-position: 70% 100%;
+        &-description {
+            @apply absolute text-white w-full h-full text-center flex flex-col justify-center content-center items-center;
+            background: rgba(0, 0, 0, 0.4);
+
+            &-title {
+                font-size: 35px;
+    padding: 0px 1rem;
+            }
+
+            &-sub_title {
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 34px;
+            }
+        }
+    }
+
+    &-services {
+        &-container {
+            @apply mt-4 mb-[60px] flex flex-row flex-wrap mx-4 gap-4;
+        }
+
+        &-card {
+            @apply flex flex-col basis-full w-full px-2.5 pt-2.5 bg-white pb-4;
+            border-radius: 4px;
+            border: 1px solid #E8E8E8;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+                border-radius: 4px;
+            }
+
+            &-details {
+                @apply flex flex-col;
+            }
+
+            &-name {
+                @apply flex flex-row items-center content-center mt-2;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 28px;
+
+                span {
+                    @apply ml-3;
+                    font-size: 14px;
+                    line-height: 28px;
+                    color: #192A56;
+                }
+            }
+
+            &-website {
+                @apply flex flex-row items-center content-center mt-2;
+
+                span {
+                    @apply mr-2;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 32px;
+                    color: #5D5D5D;
+                }
+
+                div[inlinesvg] {
+                    ::ng-deep svg {
+                        fill: #5D5D5D;
+                        height: 24px;
+                        width: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@screen md {
+    .portfolio {
+        &-container {}
+
+        &-banner {
+            @apply relative;
+            height: 543px;
+            background-image: url("/assets/images/service-banner.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-position: center;
+            object-fit: cover;
+            background-position: top;
+            &:after {
+                @apply absolute bottom-0 left-0 right-0;
+                content: ' ';
+                height: 100px;
+                background: linear-gradient(180deg, #141414 0%, rgba(30, 30, 30, 0.278407) 69.85%, rgba(23, 23, 23, 0) 85.8%);
+                transform: matrix(1, 0, 0, -1, 0, 0);
+            }
+
+            &-description {
+                @apply absolute text-white w-full h-full text-center flex flex-col justify-center content-center items-center;
+                background: rgba(0, 0, 0, 0.4);
+
+                &-title {
+                    font-size: 48px;
+                    line-height: 70px;
+                }
+
+                &-sub_title {
+                    font-weight: 700;
+                    font-size: 48px;
+                    line-height: 70px;
+                }
+            }
+        }
+
+        &-services {
+            &-container {
+                @apply mt-[41px] mb-[100px] flex flex-row flex-wrap mx-10 gap-7;
+            }
+
+            &-card {
+                @apply flex flex-col basis-[calc(50%-30px)] w-[calc(100%-30px)] px-2.5 pt-2.5 bg-white pb-4;
+                border-radius: 4px;
+                border: 1px solid #E8E8E8;
+
+                img {
+                    min-height: 435px;
+                    min-width: 307px;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 4px;
+                }
+
+                &-details {
+                    @apply flex flex-col;
+                }
+
+                &-name {
+                    @apply flex flex-row items-center content-center mt-4;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 32px;
+
+                    span {
+                        @apply ml-5;
+                        font-size: 20px;
+                        line-height: 32px;
+                        width: 200px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        color: #192A56;
+                    }
+                }
+
+                &-website {
+                    @apply flex flex-row items-center content-center mt-4;
+
+                    span {
+                        @apply mr-2;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 32px;
+                        color: #5D5D5D;
+                    }
+
+                    div[inlinesvg] {
+                        ::ng-deep svg {
+                            fill: #5D5D5D;
+                            height: 30px;
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@screen lg {
+    .portfolio {
+        &-container {}
+
+        &-banner {
+            @apply w-[100%] flex justify-center;
+            height: 543px;
+            background-image: url("/assets/images/service-banner.jpg");
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+
+            &:after {
+                height: 133px;
+            }
+        }
+
+        &-services {
+            &-container {
+                @apply mt-[46px] mx-8 gap-8;
+            }
+
+            &-card {
+                @apply basis-[calc(50%-32px)] w-[calc(100%-32px)] px-3.5 pt-3.5 pb-4;
+
+                img {
+                    width: 100%;
+                    min-height: 435px;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 4px;
+                }
+
+                &-details {
+                    @apply flex flex-row justify-between;
+                }
+
+                &-name {
+                    span {
+                        @apply ml-5;
+                        font-size: 20px;
+                        line-height: 32px;
+                        width: 250px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        color: #192A56;
+                    }
+                }
+
+                &-website {
+                    @apply flex flex-row items-center content-center mt-4;
+
+                    span {
+                        @apply mr-2;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 32px;
+                        color: #5D5D5D;
+                    }
+
+                    div[inlinesvg] {
+                        ::ng-deep svg {
+                            fill: #5D5D5D;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@screen xxl {
+    .portfolio {
+        &-container {}
+
+        &-banner {}
+
+        &-services {
+            &-container {}
+
+            &-card {
+
+                img {}
+
+                &-details {}
+
+                &-name {
+                    span {
+                        width: 100%;
+                        overflow: unset;
+                        text-overflow: unset;
+                        white-space: unset;
+                    }
+                }
+
+                &-website {
+                    span {}
+
+                    div[inlinesvg] {
+                        ::ng-deep svg {}
+                    }
+                }
+            }
+        }
+    }
+}
+
+$main-blue: #0076bd !default;
+$main-blue-rgb-015: rgba(0, 118, 189, 0.1) !default;
+
+
+.light {
+    background: #f3f5f7;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+#pageHeaderTitle {
+    margin: 2rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/* Cards */
+.services {
+    flex-wrap: wrap;
+    display: flex;
+
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+    border-radius: 10px;
+    margin: 0 0 2rem 0;
+    overflow: hidden;
+    position: relative;
+    color: #ffffff;
+
+    &.dark {
+        background-color: #18151f;
+    }
+
+    &.light {
+        background-color: #e1e5ea;
+    }
+
+    .t-dark {
+        color: #18151f;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    h1,
+    .h1 {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    .small {
+        font-size: 80%;
+    }
+
+    .services__title {
+        font-size: 1.75rem;
+    }
+
+    .services__img {
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+    }
+
+    .services__img_link {
+        display: contents;
+    }
+
+    .services__bar {
+        width: 50px;
+        height: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        background-color: #424242;
+        transition: width 0.2s ease;
+    }
+
+    .services__text {
+        padding: 1.5rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .services__preview-txt {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: justify;
+        height: 100%;
+    }
+
+    .services__tagbox {
+        display: flex;
+        flex-flow: row wrap;
+        font-size: 14px;
+        margin: 20px 0 0 0;
+        padding: 0;
+        justify-content: center;
+
+        .tag__item {
+            display: inline-block;
+            background: rgba(83, 83, 83, 0.4);
+            border-radius: 3px;
+            padding: 2.5px 10px;
+            margin: 0 5px 5px 0;
+            cursor: default;
+            user-select: none;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background: rgba(83, 83, 83, 0.8);
+            }
+        }
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(-70deg, #424242, transparent 50%);
+        opacity: 1;
+        border-radius: 10px;
+    }
+
+    &:hover .services__bar {
+        width: 100px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .services {
+        flex-wrap: inherit;
+
+        .services__title {
+            font-size: 2rem;
+        }
+
+        .services__tagbox {
+            justify-content: start;
+        }
+
+        .services__img {
+            max-width: 300px;
+            max-height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .services__text {
+            padding: 3rem;
+            width: 100%;
+        }
+
+        .media.services__text:before {
+            content: "";
+            position: absolute;
+            display: block;
+            background: #18151f;
+            top: -20%;
+            height: 130%;
+            width: 55px;
+        }
+
+        &:hover .services__img {
+            transform: scale(1.1);
+        }
+
+        &:nth-child(2n+1) {
+            flex-direction: row;
+        }
+
+        &:nth-child(2n+0) {
+            flex-direction: row-reverse;
+        }
+
+        &:nth-child(2n+1) .services__text::before {
+            left: -12px !important;
+            transform: rotate(4deg);
+        }
+
+        &:nth-child(2n+0) .services__text::before {
+            right: -12px !important;
+            transform: rotate(-4deg);
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .services__text {
+        padding: 2rem 3.5rem;
+    }
+
+    .services__text:before {
+        content: "";
+        position: absolute;
+        display: block;
+
+        top: -20%;
+        height: 130%;
+        width: 55px;
+    }
+
+}
+
+.services .services__tagbox .blue.play:hover {
+    background: $main-blue;
+}
+
+.blue .services__title:hover {
+    color: $main-blue;
+}
+
+.blue .services__bar {
+    background-color: $main-blue;
+}
+
+.blue::before {
+    background-image: linear-gradient(-30deg, $main-blue-rgb-015, transparent 50%);
+}
+
+.blue:nth-child(2n)::before {
+    background-image: linear-gradient(30deg, $main-blue-rgb-015, transparent 50%);
+}
+
+
+@media screen and (min-width: 769px) {
+    .blue::before {
+        background-image: linear-gradient(-80deg,
+                $main-blue-rgb-015,
+                transparent 50%);
+    }
+
+    .blue:nth-child(2n)::before {
+        background-image: linear-gradient(80deg, $main-blue-rgb-015, transparent 50%);
+    }
+}
+
+@media(max-width: 768px){
+    .services .services__text{
+        padding: 1rem;
+    }
+}
