@@ -1,0 +1,979 @@
+.portfolio-detail {
+    ::ng-deep &-carousel .carousel-indicators {
+       left: unset;
+       margin-right: 1rem;
+       flex-direction: column;
+       @apply gap-y-[14px] h-full mb-0;
+       & [data-bs-target] {
+           width: 16px;
+           height: 16px;
+           background: #192A56;
+           border: 2px solid #FFFFFF;
+           border-radius: 50%;
+       }
+   }
+   &-container {
+       @apply bg-white overflow-x-hidden;
+   }
+   &-banner {
+       @apply w-[100%] flex justify-center;
+       width: 100%;
+       object-fit: cover;
+       object-position: center;
+       background-size: 100%;
+       background-repeat: no-repeat;
+       &-name {
+           @apply relative top-[-90px] flex flex-row justify-start content-center items-center text-white px-5;
+           font-size: 12px;
+            ::ng-deep svg path {
+               fill: white;
+           }
+       }
+   }
+   &-about {
+       margin: 80px 0px;
+       // @apply px-3.5 flex flex-col items-center;
+       &-headline {
+           color: #192A56;
+           font-weight: 700;
+           font-size: 32px;
+           // line-height: 34px;
+       }
+       &-sub-headline {
+           @apply mb-5;
+           color: #192A56;
+           font-weight: 700;
+           font-size: 22px;
+           // line-height: 34px;
+       }
+       &-content {
+           @apply order-1;
+           p {
+               // font-weight: 400;
+               font-size: 1rem;
+               line-height: 28px;
+           }
+           // p:not(:last-child) {
+           //     margin-bottom: 15px;
+           // }
+       }
+       &-image {
+            object-fit: cover;
+           height: 470px;width: 100%
+       }
+       &-extra {
+           @apply my-6 order-2;
+           p {
+               font-weight: 400;
+               font-size: 14px;
+               line-height: 28px;
+               margin-bottom: 20px;
+           }
+       }
+   }
+   ś {
+       @apply mt-[80px];
+       // &-headline {
+       //     @apply mb-4 relative;
+       //     font-weight: 700;
+       //     font-size: 22px;
+       //     line-height: 34px;
+       // }
+       // &-content {
+       //     @apply px-3.5 pt-8 bg-[#F8F8F8] relative;
+       //     .top-waves {
+       //         @apply absolute top-[-56px] -z-0 left-[-24px] right-[-16px];
+       //          ::ng-deep svg {
+       //             width: 100%;
+       //             height: auto;
+       //         }
+       //     }
+       //     .bottom-waves {
+       //         @apply absolute bottom-[-56px] -z-0 left-[-24px] right-[-16px];
+       //          ::ng-deep svg {
+       //             width: 100%;
+       //             height: auto;
+       //         }
+       //     }
+       //     .dark-underline {
+       //         @apply mb-5 relative;
+       //     }
+       //     p {
+       //         @apply relative;
+       //         font-weight: 400;
+       //     }
+       //     p:not(:last-child) {
+       //         @apply mb-5;
+       //     }
+       //     p:last-child {
+       //         @apply pb-[42px];
+       //     }
+       // }
+       // &-image {
+       //     @apply mt-5;
+       //     border-radius: 50%;
+       //     object-fit: cover;
+       //     object-position: center;
+       //     &-container {
+       //         @apply mt-16 flex flex-row justify-center pt-9 px-3.5;
+       //         background-image: url("/assets/images/portfolio/portfolio-bg.png");
+       //         width: 100%;
+       //         object-fit: cover;
+       //         object-position: center;
+       //         background-size: 100%;
+       //         background-repeat: no-repeat;
+       //     }
+       // }
+   }
+   &-manager {
+       @apply mx-5 my-12;
+       &-headline {
+           @apply mb-5;
+           font-size: 22px;
+           line-height: 28px;
+           color: #192A56;
+       }
+       &-description {
+           font-style: italic;
+           font-weight: 400;
+           font-size: 14px;
+           line-height: 28px;
+       }
+   }
+   &-recent-works {
+       &-container {
+           @apply flex flex-row gap-x-3.5;
+       }
+        ::ng-deep .recent-works-carousel .carousel-indicators {
+           @apply mb-0 bottom-[-40px];
+           & [data-bs-target] {
+               &.active {
+                   background: #192A56;
+                   opacity: 1;
+               }
+               width: 16px;
+               height: 16px;
+               background: #D9D9D9;
+               opacity: 0.6;
+               border: 2px solid #FFFFFF;
+               border-radius: 50%;
+           }
+       }
+       @apply px-5 mt-16 mb-[129px];
+       &-headline {
+           margin-bottom: 1rem;
+           font-weight: 700;
+           color: #192A56;
+           font-size: 22px;
+       }
+       .dark-underline {
+          margin-bottom: 3rem;
+       }
+   }
+}
+
+.dark-underline,
+.light-underline {
+   display: flex;
+   @screen md {
+       height: 6px;
+       width: 344px;
+   }
+}
+
+.reservation-link {
+   @apply relative flex justify-center items-center;
+   background: #192A56;
+   border-radius: 70px;
+   width: 170px;
+   height: 48px;
+   margin-top: 5px;
+   margin-bottom: 5px;
+
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 26px;
+   color: white;
+   text-decoration: none;
+}
+
+// @screen sm {
+//     .portfolio-detail {
+//         ś {
+//             &-image {
+//                 &-container {}
+//             }
+//         }
+//     }
+// }
+
+@screen md {
+   .portfolio-detail {
+        ::ng-deep &-carousel .carousel-indicators {
+           margin-right: 2.5rem;
+           & [data-bs-target] {}
+       }
+       &-container {
+           ngb-carousel:first-child {
+               @apply relative;
+               &:after {
+                   @apply absolute bottom-0 left-0 right-0;
+                   content: ' ';
+                   height: 100px;
+                   background: linear-gradient(180deg, #141414 0%, rgba(30, 30, 30, 0.278407) 69.85%, rgba(23, 23, 23, 0) 85.8%);
+                   transform: matrix(1, 0, 0, -1, 0, 0);
+               }
+           }
+       }
+       &-banner {
+           // @apply h-[690px] w-[100%] flex justify-center;
+           width: 100%;
+           max-height: 800px;
+           object-fit: cover;
+           object-position: center;
+           background-size: 100%;
+           background-repeat: no-repeat;
+           &-name {
+               // @apply top-[-42px];
+               font-size: 18px;
+                ::ng-deep svg path {}
+           }
+       }
+       // &-about {
+       //     @apply px-[60px];
+       //     // &-headline {
+       //     //     font-size: 40px;
+       //     //     line-height: 70px;
+       //     // }
+       //     // &-sub-headline {
+       //     //     font-size: 26px;
+       //     //     line-height: 46px;
+       //     // }
+       //     // &-content {
+       //     //     p {
+       //     //         font-size: 20px;
+       //     //         line-height: 40px;
+       //     //     }
+       //     //     // p:not(:last-child) {
+       //     //     //     margin-bottom: 20px;
+       //     //     // }
+       //     // }
+       //     &-image {
+       //         @apply mt-8;
+       //         width: 648px;
+       //         height: 623px;
+       //     }
+       //     &-extra {
+       //         p {
+       //             font-size: 20px;
+       //             line-height: 40px;
+       //         }
+       //     }
+       // }
+       // ś {
+       //     // @apply mt-[129px];
+       //     // &-headline {
+       //     //     font-size: 40px;
+       //     //     line-height: 70px;
+       //     // }
+       //     // &-content {
+       //     //     @apply px-[65px] pt-10 bg-[#F8F8F8] relative;
+       //     //     .top-waves {
+       //     //         @apply absolute top-[-56px] -z-0 left-[-24px] right-[-16px];
+       //     //          ::ng-deep svg {
+       //     //             width: 100%;
+       //     //             height: auto;
+       //     //         }
+       //     //     }
+       //     //     .bottom-waves {
+       //     //         @apply absolute bottom-[-68px] -z-0 left-[-24px] right-[-16px];
+       //     //          ::ng-deep svg {}
+       //     //     }
+       //     //     .dark-underline {
+       //     //         @apply mb-8;
+       //     //     }
+       //     //     p {
+       //     //         font-weight: 400;
+       //     //         font-size: 20px;
+       //     //         line-height: 40px;
+       //     //     }
+       //     //     p:not(:last-child) {
+       //     //         @apply mb-5;
+       //     //     }
+       //     //     p:last-child {
+       //     //         @apply pb-[42px];
+       //     //     }
+       //     // }
+       //     // &-image {
+       //     //     @apply mt-2;
+       //     //     width: 648px;
+       //     //     height: 648px;
+       //     //     &-container {
+       //     //         @apply pt-9 px-[60px];
+       //     //     }
+       //     // }
+       // }
+       &-manager {
+           @apply mx-[60px] my-12;
+           &-headline {
+               @apply mb-1;
+               font-size: 26px;
+               line-height: 46px;
+           }
+           &-description {
+               font-size: 20px;
+               line-height: 40px;
+           }
+       }
+       &-recent-works {
+           &-container {
+               @apply flex flex-row gap-x-3.5;
+               app-recent-work-card {
+                   @apply w-full basis-full;
+                   //  ::ng-deep img {
+                   //     height: 435px;
+                   // }
+                    ::ng-deep .card-name span {
+                       @apply w-full;
+                   }
+                    ::ng-deep .card-details {
+                       @apply flex-row justify-between flex-wrap;
+                   }
+               }
+           }
+            ::ng-deep .recent-works-carousel .carousel-indicators {
+               @apply bottom-[-60px];
+               & [data-bs-target] {
+                   &.active {}
+               }
+           }
+           @apply px-[60px] mt-16 mb-[129px];
+           &-headline {
+               margin-bottom: 0.875rem;
+   font-size: 22px;
+           }
+           // .dark-underline {
+           //     @apply mb-[60px];
+           // }
+       }
+   }
+   .reservation-link {
+       width: 180px;
+   }
+}
+
+@screen lg {
+   .portfolio-detail {
+        ::ng-deep &-carousel .carousel-indicators {
+           & [data-bs-target] {}
+       }
+       &-container {
+           ngb-carousel:first-child {
+               &:after {
+                   content: ' ';
+                   height: 133px;
+               }
+           }
+       }
+       &-banner {
+           &-name {
+                ::ng-deep svg path {}
+           }
+       }
+       &-about {
+           &-headline {}
+           &-sub-headline {}
+           &-content {
+               p {}
+               p:not(:last-child) {}
+           }
+           &-image {}
+           &-extra {}
+       }
+       // ś {
+       //     &-headline {}
+       //     &-content {
+       //         .top-waves {
+       //              ::ng-deep svg {}
+       //         }
+       //         .bottom-waves {
+       //              ::ng-deep svg {}
+       //         }
+       //         .dark-underline {}
+       //         p:not(:last-child) {}
+       //         p:last-child {}
+       //     }
+       //     &-image {
+       //         &-container {}
+       //     }
+       // }
+       &-manager {
+           @apply mx-[60px] my-12;
+           &-headline {
+               @apply mb-1;
+               font-size: 26px;
+               line-height: 46px;
+           }
+           &-description {
+               font-size: 20px;
+               line-height: 40px;
+           }
+       }
+       &-recent-works {
+           &-container {
+               @apply flex flex-row gap-x-3.5;
+               app-recent-work-card {
+                   //  ::ng-deep img {
+                   //     height: 435px;
+                   // }
+                    ::ng-deep .card-name span {
+                       @apply w-full;
+                   }
+                    ::ng-deep .card-details {
+                       @apply flex-row justify-between flex-wrap;
+                   }
+               }
+           }
+            ::ng-deep .recent-works-carousel .carousel-indicators {
+               @apply bottom-[-60px];
+               & [data-bs-target] {
+                   &.active {}
+               }
+           }
+           @apply px-[60px] mt-16 mb-[129px];
+           // &-headline {
+           //     font-size: 40px;
+           //     line-height: 70px;
+           // }
+           // .dark-underline {
+           //     @apply mb-[60px];
+           // }
+       }
+   }
+   .reservation-link {
+       width: 180px;
+   }
+}
+
+@screen xl {
+   .portfolio-detail {
+        ::ng-deep &-carousel .carousel-indicators {
+           margin-right: 64px;
+           & [data-bs-target] {}
+       }
+       &-container {}
+       &-banner {
+           // @apply h-[690px] w-[100%] flex justify-center;
+           &-name {
+               @apply top-[-60px] pl-[68px];
+               font-size: 20px;
+                ::ng-deep svg path {}
+           }
+       }
+       // &-about {
+       //     @apply px-[140px] flex flex-row gap-x-[50px] mt-[80px] items-start flex-wrap;
+       //     &-headline {}
+       //     &-content {
+       //         @apply flex flex-col basis-[calc(50%-50px)] pt-0 order-1;
+       //         p:not(:last-child) {}
+       //     }
+       //     &-image {
+       //         @apply flex mt-0 basis-[calc(50%-50px)] order-2;
+       //         object-fit: cover;
+       //         min-width: 0;
+       //         width: 500px !important;
+       //         height: 578px !important;
+       //     }
+       //     // &-extra {
+       //     //     @apply flex flex-col order-3;
+       //     //     p {}
+       //     // }
+       // }
+       // ś {
+       //     @apply mt-[80px] flex flex-row relative;
+       //     &-headline {
+       //         font-size: 40px;
+       //         line-height: 70px;
+       //     }
+       //     &-content {
+       //         @apply absolute right-0 basis-[60%] w-[60%] left-[unset] justify-center top-[240px] bottom-[240px] pr-[60px] pl-[170px];
+       //         .top-waves {
+       //             @apply absolute top-[-120px] -z-0 left-[-24px] right-[-16px];
+       //              ::ng-deep svg {
+       //                 width: 100%;
+       //                 height: auto;
+       //             }
+       //         }
+       //         .bottom-waves {
+       //             @apply absolute bottom-[-120px] -z-0 left-[-24px] right-[-16px];
+       //              ::ng-deep svg {}
+       //         }
+       //         .dark-underline {
+       //             @apply mb-8;
+       //         }
+       //         p:not(:last-child) {
+       //             @apply mb-5;
+       //         }
+       //         p:last-child {
+       //             @apply pb-[42px];
+       //         }
+       //     }
+       //     &-image {
+       //         @apply p-0 relative h-full w-auto flex order-1 basis-[40%] left-[-280px];
+       //         width: 865px;
+       //         height: 896px;
+       //         box-shadow: 4px 4px 25px 3px rgba(0, 0, 0, 0.06);
+       //         &-container {
+       //             @apply justify-start;
+       //             background: unset;
+       //         }
+       //     }
+       // }
+       &-manager {
+           @apply mx-[140px] mt-[80px];
+           &-headline {
+               @apply mb-5;
+               font-size: 26px;
+               line-height: 46px;
+               color: #192A56;
+           }
+           &-description {
+               font-style: italic;
+               font-weight: 400;
+               font-size: 20px;
+               line-height: 40px;
+           }
+       }
+       &-recent-works {
+           @apply mx-[140px] mt-[151px] px-0 mt-16 mb-[180px];
+           &-container {
+               @apply flex flex-row gap-x-3.5;
+               app-recent-work-card {
+                   @apply w-6/12 basis-6/12;
+                   //  ::ng-deep img {
+                   //     height: 435px;
+                   // }
+                    ::ng-deep .card-name {
+                       @apply overflow-hidden;
+                   }
+                    ::ng-deep .card-name span {
+                       @apply w-full;
+                   }
+                    ::ng-deep .card-details {
+                       @apply flex-row justify-between;
+                   }
+               }
+           }
+            ::ng-deep .recent-works-carousel .carousel-indicators {
+               @apply bottom-[-80px];
+               & [data-bs-target] {
+                   &.active {}
+               }
+           }
+           &-headline {
+               margin-bottom: 1.25rem;
+               font-size: 36px;
+           }
+           // .dark-underline {
+           //     @apply mb-[60px];
+           // }
+       }
+   }
+   .reservation-link {
+       width: 234px;
+       height: 58px;
+   }
+}
+
+@screen xxl {
+   .portfolio-detail {
+        ::ng-deep &-carousel .carousel-indicators {
+           & [data-bs-target] {}
+       }
+       &-container {}
+       &-banner {
+           &-name {
+                ::ng-deep svg path {}
+           }
+       }
+       // &-about {
+       //     @apply px-[140px] mt-[80px];
+       //     &-headline {}
+       //     // &-content {
+       //     //     p {
+       //     //         font-size: 20px;
+       //     //         line-height: 40px;
+       //     //     }
+       //     //     p:not(:last-child) {}
+       //     // }
+       //     &-image {
+       //         width: 600px !important;
+       //         height: 678px !important;
+       //     }
+       //     &-extra {
+       //         p {
+       //             font-size: 20px;
+       //             line-height: 40px;
+       //         }
+       //     }
+       // }
+       // ś {
+       //     // @apply mt-[80px];
+       //     // &-headline {}
+       //     // &-content {
+       //     //     // @apply top-[240px] bottom-[240px] pr-[160px] pl-[250px];
+       //     //     .top-waves {
+       //     //         @apply absolute top-[-120px] -z-0 left-[-24px] right-[-16px];
+       //     //          ::ng-deep svg {}
+       //     //     }
+       //     //     .bottom-waves {
+       //     //         @apply absolute bottom-[-120px] -z-0 left-[-24px] right-[-16px];
+       //     //          ::ng-deep svg {}
+       //     //     }
+       //     //     .dark-underline {}
+       //     //     p:not(:last-child) {}
+       //     //     p:last-child {}
+       //     // }
+       //     // &-image {
+       //     //     @apply p-0 relative h-full w-auto flex order-1 basis-[40%] left-[-190px];
+       //     //     width: 1015px;
+       //     //     height: 1046px;
+       //     //     &-container {
+       //     //         background: unset;
+       //     //     }
+       //     // }
+       // }
+       &-manager {
+           @apply mx-[140px] mt-[80px];
+           &-headline {}
+           &-description {}
+       }
+       &-recent-works {
+           @apply mx-[140px] mt-[151px];
+           &-container {
+               app-recent-work-card {
+                   @apply w-full basis-full;
+                    ::ng-deep img {}
+                    ::ng-deep .card-name span {}
+                    ::ng-deep .card-details {}
+               }
+           }
+            ::ng-deep .recent-works-carousel .carousel-indicators {
+               & [data-bs-target] {
+                   &.active {}
+               }
+           }
+           &-headline {}
+           .dark-underline {}
+       }
+   }
+}
+
+@screen xxxl {
+   .portfolio-detail {
+        ::ng-deep &-carousel .carousel-indicators {
+           & [data-bs-target] {}
+       }
+       &-container {}
+       &-banner {
+           &-name {
+                ::ng-deep svg path {}
+           }
+       }
+       &-about {
+           // @apply px-[240px] mt-[110px];
+           &-headline {}
+           &-content {
+               p:not(:last-child) {}
+           }
+           // &-image {
+           //     width: 705px !important;
+           //     height: 678px !important;
+           // }
+       }
+       // ś {
+       //     @apply mt-[129px];
+       //     &-headline {}
+       //     &-content {
+       //         @apply absolute top-[240px] bottom-[240px] pr-[224px] pl-[320px];
+       //         .top-waves {
+       //             @apply absolute top-[-120px] -z-0 left-[-24px] right-[-16px];
+       //              ::ng-deep svg {}
+       //         }
+       //         .bottom-waves {
+       //             @apply absolute bottom-[-120px] -z-0 left-[-24px] right-[-16px];
+       //              ::ng-deep svg {}
+       //         }
+       //         .dark-underline {}
+       //         p:not(:last-child) {}
+       //         p:last-child {}
+       //     }
+       //     &-image {
+       //         @apply left-[-290px];
+       //         width: 1265px;
+       //         height: 1296px;
+       //         &-container {
+       //             background: unset;
+       //         }
+       //     }
+       // }
+       &-manager {
+           @apply mx-[240px] mt-[154px];
+           &-headline {}
+           &-description {}
+       }
+       &-recent-works {
+           @apply mx-[240px] mt-[151px] mb-[180px];
+           &-container {
+               app-recent-work-card {
+                    ::ng-deep img {}
+                    ::ng-deep .card-name span {}
+                    ::ng-deep .card-details {}
+               }
+           }
+            ::ng-deep .recent-works-carousel .carousel-indicators {
+               @apply bottom-[-80px];
+               & [data-bs-target] {
+                   &.active {}
+               }
+           }
+           &-headline {}
+           .dark-underline {}
+       }
+   }
+}
+
+@screen qxl {
+   .portfolio-detail {
+        ::ng-deep &-carousel .carousel-indicators {
+           & [data-bs-target] {}
+       }
+       &-container {}
+       &-banner {
+           &-name {
+                ::ng-deep svg path {}
+           }
+       }
+       &-about {
+           &-headline {}
+           &-content {
+               p:not(:last-child) {}
+           }
+           &-image {}
+       }
+       // ś {
+       //     &-headline {}
+       //     &-content {
+       //         @apply absolute w-[60%] basis-[60%] top-[210px] bottom-[210px] pr-[224px] pl-[275px] order-2;
+       //         .top-waves {
+       //             @apply absolute top-[-120px] -z-0 left-[-24px] right-[-16px];
+       //              ::ng-deep svg {}
+       //         }
+       //         .bottom-waves {
+       //             @apply absolute bottom-[-120px] -z-0 left-[-24px] right-[-16px];
+       //              ::ng-deep svg {}
+       //         }
+       //         .dark-underline {}
+       //         p:not(:last-child) {}
+       //         p:last-child {}
+       //     }
+       //     &-image {
+       //         @apply relative left-0 order-1 h-full w-auto basis-[50%];
+       //         width: 960px;
+       //         height: 960px;
+       //         &-container {
+       //             background: unset;
+       //         }
+       //     }
+       // }
+       &-manager {
+           @apply mx-[240px] mt-[154px];
+           &-headline {}
+           &-description {}
+       }
+       &-recent-works {
+           @apply mx-[240px] mt-[151px] px-[240px] mb-[180px];
+           &-container {
+               app-recent-work-card {
+                    ::ng-deep img {}
+                    ::ng-deep .card-name span {}
+                    ::ng-deep .card-details {}
+               }
+           }
+            ::ng-deep .recent-works-carousel .carousel-indicators {
+               @apply bottom-[-80px];
+               & [data-bs-target] {
+                   &.active {}
+               }
+           }
+           &-headline {}
+           .dark-underline {}
+       }
+   }
+}
+
+.button {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   padding-left: 38px;
+   padding-right: 38px;
+   background: #192A56;
+   border: 1px solid #B0B0B0;
+   border-radius: 4px;
+   height: 54px;
+   color: white;
+   font-weight: 600;
+   font-size: 18px;
+   line-height: 21px;
+   max-width: 200px;
+}
+
+.featured-amenties h5.sub-head {
+   display: block;
+   width: 100%;
+   margin-bottom: 2rem;
+}
+
+.featured-amenties .row {
+   width: 100%;
+}
+
+// .container-qxl.rooms-suit {
+//     margin-top: 0px;
+// }
+
+ul.amentied-list li:before {
+   content: "";
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   left: 0;
+   right: auto;
+   width: 6px;
+   height: 6px;
+   background: #5c5c5c;
+   border-radius: 50%;
+}
+
+ul.amentied-list li {
+   list-style: none;
+   position: relative;
+   padding-left: 20px;
+   margin-bottom: 10px;
+}
+
+ul.amentied-list {
+   padding: 0;
+   margin: 0;
+}
+
+@media(max-width: 767px) {
+   .portfolio-detail-room-image {
+       width: 300px;
+   }
+}
+
+@media(min-width: 1200px) {
+   .portfolio-detail-room-image {
+       left: -320px;
+   }
+}
+
+@media(min-width: 1400px) {
+   .portfolio-detail-room-image {
+       left: -300px;
+   }
+}
+
+@media(min-width: 1700px) {
+   .portfolio-detail-room-image {
+       left: -400px;
+   }
+}
+
+@media(min-width: 2000px) {
+   .portfolio-detail-room-image {
+       width: 820px;
+       height: 820px;
+   }
+}
+
+.ml-4 {
+   margin-left: 14px;
+}
+
+.ml-2 {
+   margin-left: 7px;
+}
+.portfolio-detail-room-content p {
+   margin-top: 1.75rem;
+   font-size: 1rem;
+}
+.portfolio-detail-room-content{
+   padding-left: 2rem;
+}
+
+.portfolio-detail-room {
+   padding: 80px 0px;
+   background-color: #fbfbfb;
+   margin-top: 80px;
+}
+
+
+@media(max-width: 992px){
+   .portfolio-detail-about {
+       margin: 0px 0px 40px 0px;
+   }
+}
+
+@media(max-width: 768px){
+   .portfolio-detail-banner-nameḍ{
+       top: -75px;
+   }
+   a.reservation-link {
+       margin-bottom: 2rem !important;
+   }
+   .portfolio-detail-room-content{
+       padding-left: 0;
+   }
+   .portfolio-detail-banner-name{
+       font-size: 15px;
+   }
+   .portfolio-detail-about-image{
+       height: auto;
+   }
+   .portfolio-detail-room {
+       padding: 40px 0px;
+       margin-top: 40px;
+   }
+   .portfolio-detail-room .col-md-3 {
+       order: 2;
+   }
+   .welcome-image {
+       order: 1;
+   }
+   .portfolio-detail-about{
+       padding-top: 0px !important;
+   }
+   .portfolio-detail-about-headline{
+       font-size: 25px;
+   }
+   .portfolio-detail-about-sub-headline{
+       font-size: 18px;
+   }
+   .portfolio-detail-carousel img{
+       height: 450px;
+   }
+}
+@media(max-width: 576px){
+   .portfolio-detail-about{
+       margin-top: -50px;
+   }
+}
+@media(max-width: 480px){
+   .portfolio-detail-banner-name{
+       top: -115px;
+   }
+}

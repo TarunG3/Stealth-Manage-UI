@@ -7,11 +7,10 @@ import { StealthExpertDetailComponent } from '../stealth-expert-detail/stealth-e
 import { InlineSVGModule } from 'ng-inline-svg-2';
 import { RouterModule } from '@angular/router';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
-import { LayoutModule } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-stealth-home',
-  imports: [CommonModule, NgbCarouselModule, InlineSVGModule, RouterModule, LazyLoadImageModule, LayoutModule],
+  imports: [CommonModule, NgbCarouselModule, InlineSVGModule, RouterModule, LazyLoadImageModule],
   templateUrl: './stealth-home.component.html',
   styleUrl: './stealth-home.component.scss'
 })

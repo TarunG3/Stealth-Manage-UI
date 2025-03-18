@@ -1,1 +1,87 @@
-<p>signup works!</p>
+<div class="contact-container">
+    <div class="contact-banner">
+      <div class="contact-banner-description">
+        <div>
+          <h1 class="contact-banner-description-title">Investors</h1>
+        </div>
+      </div>
+    </div>
+  <div class="login-card container-qxl">
+    <div class="contact-banner-card">
+  
+  
+      <div class="contact-banner-card-detail">
+        <div *ngIf="investorData" class="contact-banner-card-detail-title">{{investorData?.title}} </div>
+        <div *ngIf="investorData" class="contact-banner-card-subtitle" [innerHTML]="investorData?.description"></div>
+      </div>
+  
+      <div class="investor-form">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-8">
+              <form #form_investor="ngForm" class="w-100" [formGroup]="contactForm" (ngSubmit)="submitForm()">
+                <div class="contact-banner-card-form">
+          
+                  <div class="row w-100">
+                    <div class="col-12">
+                      <div class="text-center topsign_part d-flex align-items-center mb-4 w-100">
+                        <h2>Sign up</h2>
+                        <div class="or">
+                          <span>OR</span>
+                        </div>
+                        <div class="signin">
+                          <h2 class="blink_me">
+          
+                            <a style="text-decoration: none;" target="_blank"
+                              href="https://ad.stealthmanage.com/"> Sign in</a>
+          
+                          </h2>
+          
+                        </div>
+                      </div>
+                    </div>
+                    <ng-container formGroupName="name">
+                      <div class="col-6">
+                        <input formControlName="firstName" type="text" class="form-control w-100" placeholder="Your FirstName *"
+                          aria-label="Your FirstName" aria-describedby="User Firstname">
+                      </div>
+                      <div class="col-6">
+                        <input formControlName="lastName" type="text" class="form-control w-100" placeholder="Your LastName *"
+                          aria-label="Your LastName" aria-describedby="User Lastname">
+                      </div>
+                    </ng-container>
+                    <div class="col-md-12">
+                      <ng-container formGroupName="contact">
+                        <input formControlName="email" type="email" class="form-control" placeholder="Email Address *"
+                          aria-label="Email Address" aria-describedby="email-address">
+                      </ng-container>
+                    </div>
+                    <div formGroupName="contact" class="col-md-12">
+                      <ng-container formGroupName="phone">
+          
+                        <input class="form-control" placeholder="Phone Number *" aria-label="Phone Number"
+                          aria-describedby="phone-address"
+                          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                          formControlName="number" matInput>
+                      </ng-container>
+                    </div>
+                    <div class="col-md-12">
+                      <textarea formControlName="message" type="text" class="form-control" placeholder="Your Message *"
+                        aria-label="Message" aria-describedby="message"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                      <button type="submit" class="button-round w-100">SUBMIT</button>
+          
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </div>

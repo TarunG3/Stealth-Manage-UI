@@ -1,1 +1,28 @@
-<p>stealth-blog works!</p>
+<div class="portfolio-container">
+    <div class="portfolio-banner wow zoomIn">
+        <div class="portfolio-banner-description">
+            <div>
+                <h1 class="portfolio-banner-description-title">Blogs</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div *ngFor="let elem of blogData" class="col">
+                <div class="card ">
+                    <div class="card-img-add">
+                        <img style="width: 100%; height: auto" [src]="elem?.image?.imageUrl" class="card-img-top"
+                            alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{elem?.title}}</h5>
+                        <p class="card-text">{{elem?.shortDescription}}</p>
+                        <p class="mt-3 text-primary"><a href="javascript:;" [routerLink]="elem?.urlSlug">Read More</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

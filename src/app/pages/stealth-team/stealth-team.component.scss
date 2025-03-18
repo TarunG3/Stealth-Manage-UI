@@ -1,0 +1,446 @@
+.team {
+    &-container {
+      @apply overflow-x-hidden overflow-y-hidden bg-white;
+    }
+  
+    &-banner {
+      @apply relative;
+      height: 343px;
+      background-image: url("/assets/images/team.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      object-position: center;
+      object-fit: cover;
+      background-position: 100% 50%;
+      &-description {
+        @apply absolute text-white w-full h-full text-center flex flex-col justify-center content-center items-center;
+        background: rgba(0, 0, 0, 0.3);
+  
+        &-title {
+          font-size: 35px;
+          padding: 0px 1rem;
+        }
+  
+        &-sub_title {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 32px;
+        }
+      }
+    }
+  
+    &-member {
+      @apply flex flex-row flex-wrap gap-8 justify-center w-full relative px-[16px];
+  
+      &-block1 {
+        @apply pb-[80px] my-[40px];
+      }
+  
+      &-block2 {
+        @apply py-[60px] my-[40px];
+        background-color: #F8F8F8;
+      }
+  
+      &-block3 {
+        @apply pt-[60px] my-[60px];
+      }
+  
+      &-block4 {
+        @apply py-[60px] mt-[120px] mb-[120px];
+        background-color: #F8F8F8;
+      }
+  
+      .top-waves {
+        @apply absolute top-[-168px] -z-0 left-0 right-0;
+  
+        ::ng-deep svg {
+          width: 100%;
+          height: 320px;
+        }
+      }
+  
+      .bottom-waves {
+        @apply absolute bottom-[-168px] -z-0 left-0 right-0;
+  
+        ::ng-deep svg {
+          width: 100%;
+          height: 320px;
+        }
+      }
+  
+  
+      &-card {
+        @apply relative flex flex-col basis-full bg-white border-r-2 relative;
+        border: 1px solid #E2E2E2;
+        box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.06);
+        min-height: 290px;
+        min-width: 290px;
+  
+        .frame-1 {
+          @apply flex flex-col justify-center items-center content-center absolute;
+          transition: 0.5s fade-in;
+          border-radius: 4px;
+          top: 21px;
+          bottom: 30px;
+          right: 26px;
+          background: white;
+          left: 21px;
+          z-index: 10;
+        }
+  
+        .frame-2 {
+          @apply absolute;
+          top: 36px;
+          border-radius: 4px;
+          bottom: 15px;
+          right: 16px;
+          left: 36px;
+        }
+  
+        &:hover {
+  
+          .frame-1,
+          .frame-2 {
+            border: 1px solid black;
+          }
+        }
+  
+        &-name {
+          text-align: center;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 32px;
+          color: #192A56;
+        }
+  
+        &-title {
+          text-align: center;
+          margin-top: 8px;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 32px;
+          color: #656565;
+        }
+      }
+    }
+  }
+  
+  @screen sm {
+    .team {
+      &-container {}
+  
+      &-banner {
+  
+        &-description {
+          &-title {}
+  
+          &-sub_title {}
+        }
+      }
+  
+      &-member {
+        @apply flex flex-row flex-wrap gap-x-[32px] gap-y-[32px] justify-center w-full px-[32px];
+  
+        &-block1 {
+          @apply pb-[90px] my-[60px];
+        }
+  
+        &-block2 {
+          @apply py-[90px] my-[60px];
+        }
+  
+        &-block3 {
+          @apply pt-[116px] my-[60px];
+        }
+  
+        &-block4 {
+          @apply py-[90px] mt-[120px] mb-[120px];
+        }
+  
+        .top-waves {
+          @apply absolute top-[-142px] -z-0 left-0 right-0;
+  
+          ::ng-deep svg {}
+        }
+  
+        .bottom-waves {
+          @apply absolute bottom-[-148px] -z-0 left-0 right-0;
+  
+          ::ng-deep svg {}
+        }
+  
+        &-card {
+          @apply flex flex-col basis-[calc(50%-32px)] min-w-[auto];
+  
+          .frame-1 {}
+  
+          .frame-2 {}
+  
+          &:hover {
+  
+            .frame-1,
+            .frame-2 {}
+          }
+  
+          &-name {}
+  
+          &-title {}
+        }
+      }
+    }
+  
+  }
+  
+  @screen md {
+    .team {
+      &-container {}
+  
+      &-banner {
+        height: 543px;
+  
+        &:after {
+          @apply absolute bottom-0 left-0 right-0;
+          content: ' ';
+          height: 100px;
+          background: linear-gradient(180deg, #141414 0%, rgba(30, 30, 30, 0.278407) 69.85%, rgba(23, 23, 23, 0) 85.8%);
+          transform: matrix(1, 0, 0, -1, 0, 0);
+        }
+  
+        &-description {
+          &-title {
+            font-size: 48px;
+            line-height: 70px;
+          }
+  
+          &-sub_title {
+            font-size: 48px;
+            line-height: 70px;
+          }
+        }
+      }
+  
+      &-member {
+        @apply flex flex-row flex-wrap gap-x-[40px] gap-y-[40px] justify-center w-full px-[74px];
+  
+        &-block1 {
+          @apply pb-[90px] my-[60px];
+        }
+  
+        &-block2 {
+          @apply py-[90px] my-[60px];
+          background-color: #F8F8F8;
+        }
+  
+        &-block3 {
+          @apply pt-[116px] my-[60px];
+        }
+  
+        &-block4 {
+          @apply py-[90px] mt-[120px] mb-[120px];
+          background-color: #F8F8F8;
+        }
+  
+        .top-waves {
+          @apply absolute top-[-142px] -z-0 left-0 right-0;
+  
+          ::ng-deep svg {}
+        }
+  
+        .bottom-waves {
+          @apply absolute bottom-[-148px] -z-0 left-0 right-0;
+  
+          ::ng-deep svg {}
+        }
+  
+        &-card {
+          @apply flex flex-col basis-[calc(50%-40px)] bg-white border-r-2 relative;
+          min-height: 290px;
+          min-width: 290px;
+  
+          .frame-1 {}
+  
+          .frame-2 {}
+  
+          &:hover {
+  
+            .frame-1,
+            .frame-2 {}
+          }
+  
+          &-name {}
+  
+          &-title {}
+        }
+      }
+    }
+  }
+  
+  @screen lg {
+    .team {
+      &-container {}
+  
+      &-banner {
+        height: 543px;
+  
+        &:after {
+          height: 133px;
+        }
+  
+        &-description {
+          &-title {}
+  
+          &-sub_title {}
+        }
+      }
+  
+      &-member {
+        @apply flex flex-row flex-wrap gap-x-8 gap-y-8 justify-center w-full px-[60px];
+  
+        &-card {
+          @apply flex flex-col basis-[calc(33.33%-32px)] bg-white border-r-2 relative;
+          min-height: 290px;
+          min-width: auto;
+  
+          .frame-1 {}
+  
+          .frame-2 {}
+  
+          &:hover {
+  
+            .frame-1,
+            .frame-2 {}
+          }
+  
+          &-name {}
+  
+          &-title {}
+        }
+      }
+    }
+  }
+  
+  @screen xl {
+    .team {
+      &-container {}
+  
+      &-banner {
+  
+        &-description {
+          &-title {}
+  
+          &-sub_title {}
+        }
+      }
+  
+      &-member {
+        @apply flex flex-row flex-wrap gap-x-[48px] gap-y-[48px] justify-center w-full px-[80px];
+  
+        &-card {
+          @apply flex flex-col bg-white border-r-2 relative;
+  
+          .frame-1 {}
+  
+          .frame-2 {}
+  
+          &:hover {
+  
+            .frame-1,
+            .frame-2 {}
+          }
+  
+          &-name {}
+  
+          &-title {}
+        }
+      }
+    }
+  }
+  
+  @screen xxl {
+    .team {
+      &-member {
+        .top-waves {
+          @apply absolute top-[-102px] -z-0 left-0 right-0;
+        }
+  
+        .bottom-waves {
+          @apply absolute bottom-[-102px] -z-0 left-0 right-0;
+        }
+  
+        &-block1 {
+          @apply pb-[120px] my-[120px];
+        }
+  
+        &-block2 {
+          @apply py-[120px] my-[90px];
+        }
+  
+        &-block3 {
+          @apply pt-[120px] my-[120px];
+        }
+  
+        &-block4 {
+          @apply py-[120px] mt-[180px] mb-[240px];
+        }
+      }
+    }
+  }
+  
+  @screen xxxl {
+    .team {
+      &-container {}
+  
+      &-banner {
+  
+        &-description {
+          &-title {}
+  
+          &-sub_title {}
+        }
+      }
+  
+      &-member {
+        @apply flex flex-row px-[100px];
+  
+        &-block1 {}
+  
+        &-block2 {}
+  
+        &-block3 {}
+  
+        &-block4 {}
+  
+        &-card {
+          @apply flex flex-col basis-[calc(25%-48px)] border-r-2 relative cursor-pointer mx-0;
+          width: 383px;
+          height: 383px;
+  
+          .frame-1 {}
+  
+          .frame-2 {}
+  
+          &:hover {
+  
+            .frame-1,
+            .frame-2 {}
+          }
+  
+          &-name {}
+  
+          &-title {}
+        }
+      }
+    }
+  }
+  
+  
+  .width-100 {
+    width: 100%;
+    content: '';
+  }
+  
+  .team-h {
+    font-size: 35px;
+    color: #192A56;
+  
+  }

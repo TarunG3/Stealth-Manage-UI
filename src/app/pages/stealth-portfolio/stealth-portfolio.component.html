@@ -1,1 +1,36 @@
-<p>stealth-portfolio works!</p>
+<div class="portfolio-container">
+    <div class="portfolio-banner wow zoomIn">
+      <div class="portfolio-banner-description">
+        <div>
+          <h1 class="portfolio-banner-description-title">Portfolio</h1>
+        </div>
+        <!-- <div class="portfolio-banner-description-sub_title">Our Recent Works</div> -->
+      </div>
+    </div>
+  
+    <div class="about-banner-card container-qxl">
+      <p>
+        We strive to create and maintain a best-in-class hospitality management solution that maximizes investment
+        returns while developing employees who are committed to providing outstanding guest experience. When a hotel
+        comes on board with Stealth Management Group, they instantly become part of the Stealth family.
+        Whether from the ground up or renovated, properties were managed with great success. Our depth of experience
+        managing big, complex facilities indicates that our team is capable of succeeding in any property management
+        situation. We develop long-term relationships for responsibility, dependability, and transparency.
+      </p>
+    </div>
+  
+    <div class="container-fluid">
+  
+      <div class="row">
+  
+        <div *ngFor="let site of portfolioSites; let odd = odd; let even = even; let i = index"
+          class="col-lg-6 col-md-12 col-sm-12 py-3">
+  
+  
+          <app-recent-work-card style="height: 100%; width: 100%;" [site]="site" [attr.data-wow-delay]="(i * 0.05) + 's'"
+            class="wow position-relative rounded" [class.fadeInLeft]="even"
+            [class.fadeInRight]="odd"></app-recent-work-card>
+        </div>
+      </div>
+    </div>
+  </div>

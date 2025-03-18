@@ -1,0 +1,48 @@
+img {
+    width: 100%;
+}
+
+.commitment-article {
+    transition: .3s;
+    h3 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        padding-bottom: 12px;
+        position: relative;
+        color: #192a56;
+        &:before {
+            content: "";
+            position: absolute;
+            top: auto;
+            bottom: 0;
+            left: auto;
+            right: auto;
+            width: 70px;
+            height: 3px;
+            border-radius: 6px;
+            background-color: #192a56;
+            transition: .3s;
+        }
+    }
+
+    p {
+        margin-bottom: 30px;
+        min-height: 225px;
+    }
+}
+.commitment-article:hover h3::before {
+    width: 100px !important;
+}
+
+@media(max-width: 992px){
+    
+    .commitment-article p{
+        min-height: auto;
+    }
+    .commitment-article{
+        margin-bottom: 30px !important;
+    }
+    h3, p{
+        margin-bottom: 20px;
+    }
+}

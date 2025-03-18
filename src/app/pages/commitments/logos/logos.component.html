@@ -1,0 +1,19 @@
+<section class="logos pb-70 ptb-70 bg-grey">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="sandbox__carousel">
+                <div class="embla-testimonial">
+                    <div class="embla__viewport-testimonial">
+                        <div class="embla__container">
+                            <div *ngFor="let elem of api.commitmentData.images" class="embla__slide">
+                                <div class="logosimg">
+                                    <img [src]="elem?.imageUrl" [alt]="elem?.altText">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

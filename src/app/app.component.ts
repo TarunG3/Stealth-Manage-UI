@@ -1,4 +1,4 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, PLATFORM_ID, inject } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { StealthHeaderComponent } from "./components/stealth-header/stealth-header.component";
 import { StealthFooterComponent } from "./components/stealth-footer/stealth-footer.component";
@@ -6,6 +6,7 @@ import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 import { Subject, filter, map, takeUntil } from 'rxjs';
 import { ApiService } from './shared/services/api.service';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -21,6 +22,7 @@ import { ApiService } from './shared/services/api.service';
 export class AppComponent {
   onDestroy: Subject<void> = new Subject<void>();
   title1 = 'Stealth-Manage-UI';
+  private platformId = inject(PLATFORM_ID);
 
   constructor(
     private router: Router,
@@ -28,8 +30,15 @@ export class AppComponent {
     private title: Title,
     public api: ApiService,
     @Inject(DOCUMENT) private document: Document,
-    @Inject(PLATFORM_ID) private platformId: any,
-  ) { }
+  ) {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      if (isPlatformBrowser(this.platformId)) {
+        window.scrollTo(0, 0);
+      }
+    });
+  }
 
   ngOnInit() {
     this.router.events

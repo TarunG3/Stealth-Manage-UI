@@ -1,1 +1,51 @@
-<p>stealth-team works!</p>
+<div class="team-container">
+    <div class="team-banner">
+      <div class="team-banner-description">
+        <!-- <div class="team-banner-description-title">Our Team</div> -->
+        <div>
+          <h1 class="team-banner-description-title">
+            Meet Our Experts
+          </h1>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container py-5">
+  
+      <div class="row">
+        <div class="col-12 my-2">
+          <h1 class="team-h">Executive Team</h1>
+        </div>
+        <div class="col-12 mt-2 mb-3">
+          <p>Each member of the Executive Team of Stealth Management averages 20 years of hotel experience
+            and
+            has a focus in the major aspects of hotel operations:</p>
+        </div>
+      </div>
+      <hr class="bg-danger border-2 border-top">
+  
+      <div class="row mt-4">
+        <div class="accordion accordion-flush">
+  
+          <div *ngFor="let elem of teamMembers; let i = index" class="accordion-item">
+            <!-- <h2 class="accordion-header" id="flush-headingOne"> -->
+  
+            <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              [attr.data-bs-target]="'#t' + i" aria-expanded="false" aria-controls="flush-collapseOne">
+  
+              <div class="width-100">
+                <h5>{{elem?.name?.firstName}} {{elem?.name?.lastName}} </h5>
+              </div>
+              <br>
+              <div class="width-100">
+                <span>{{elem?.designation}}</span>
+              </div>
+            </div>
+            <div [id]="'t' + i" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
+              <div class="accordion-body">{{elem?.description}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

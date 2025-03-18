@@ -1,1 +1,80 @@
-<p>privacy-policy works!</p>
+<div class="container min-height">
+	<div [style.padding-top]="'14vh'" class="row">
+		<div class="content-main">
+
+			<ng-container *ngFor="let elem of api.privacyPolicy?.body?.blocks">
+				<ng-container *ngIf="elem.type === 'header'">
+					<h1 *ngIf="elem.data.level === 1" [innerHTML]="elem.data.text"></h1>
+					<h2 *ngIf="elem.data.level === 2" [innerHTML]="elem.data.text"></h2>
+					<h3 *ngIf="elem.data.level === 3" [innerHTML]="elem.data.text"></h3>
+					<h4 *ngIf="elem.data.level === 4" [innerHTML]="elem.data.text"></h4>
+					<h5 *ngIf="elem.data.level === 5" [innerHTML]="elem.data.text"></h5>
+					<h6 *ngIf="elem.data.level === 6" [innerHTML]="elem.data.text"></h6>
+				</ng-container>
+
+				<ng-container *ngIf="elem.type === 'paragraph'">
+
+					<ng-container [ngSwitch]="elem.tunes.textVariant">
+						<p *ngSwitchCase="''" [innerHTML]="elem.data.text"></p>
+						<p *ngSwitchCase="'call-out'" class="call-out" [innerHTML]="elem.data.text"></p>
+						<p *ngSwitchCase="'citation'" [innerHTML]="elem.data.text"></p>
+						<p *ngSwitchCase="'details'" [innerHTML]="elem.data.text"></p>
+					</ng-container>
+
+				</ng-container>
+
+				<ng-container *ngIf="elem.type === 'list'">
+
+					<ng-container *ngIf="elem.data.style === 'unordered'">
+						<ul class="list-style-two">
+							<li *ngFor="let ulist of elem.data.items" [innerHTML]="ulist"></li>
+						</ul>
+					</ng-container>
+
+					<ng-container *ngIf="elem.data.style === 'ordered'">
+						<ol class="list-style-two">
+							<li *ngFor="let olist of elem.data.items" [innerHTML]="olist"></li>
+						</ol>
+					</ng-container>
+				</ng-container>
+
+				<ng-container *ngIf="elem.type === 'image'">
+					<caption [innerHTML]="elem.data.caption"></caption>
+					<img style="height: auto; width: 100%" [src]="elem.data.file.url" alt="blog-img">
+				</ng-container>
+
+				<ng-container *ngIf="elem.type === 'warning'">
+					<div class="warning">
+						<i class="material-icons">report_problem</i>
+						<div>
+							<p [innerHTML]="elem.data.title"></p>
+							<p [innerHTML]="elem.data.message"></p>
+						</div>
+					</div>
+				</ng-container>
+
+				<ng-container *ngIf="elem.type === 'code'">
+					<div class="code mb-4">
+						<code [innerHTML]="elem.data.code"></code>
+					</div>
+				</ng-container>
+
+				<ng-container *ngIf="elem.type === 'table'">
+					<table class="mb-4 mt-4">
+						<tr *ngFor="let row of elem.data.content; let i = index">
+
+							<ng-container *ngIf="i === 0">
+								<th *ngFor="let column of row" [innerHTML]="column"></th>
+							</ng-container>
+
+							<ng-container *ngIf="i !== 0">
+								<td *ngFor="let column of row" [innerHTML]="column"></td>
+							</ng-container>
+						</tr>
+					</table>
+				</ng-container>
+
+			</ng-container>
+		</div>
+	</div>
+</div>

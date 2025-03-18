@@ -1,0 +1,636 @@
+.contact {
+    &-container {
+        @apply bg-white;
+    }
+
+    &-banner {
+        @apply relative;
+        height: 343px;
+        background-image: url("/assets/images/investor-login.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-position: center;
+        object-fit: cover;
+        background-position: 100% 100%;    
+        &-description {
+            @apply absolute text-white w-full h-full text-center flex flex-col justify-center content-center items-center;
+            background: rgba(0, 0, 0, 0.3);
+
+            &-title {
+                font-size: 35px;
+        padding: 0px 1rem;
+            }
+
+            &-sub_title {
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 34px;
+            }
+        }
+
+        &-card {
+            @apply mx-[15px] bg-white top-[-90px] flex flex-col relative;
+            box-shadow: 0 4px 110px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+
+            &-form {
+                @apply flex flex-col justify-center items-center content-center gap-3.5 pt-3;
+
+                input,
+                textarea {
+                    background: #FCFCFC;
+                    border: 1px solid #E1E1E1;
+                }
+
+                textarea {
+                    height: 120px;
+                }
+            }
+
+            &-detail {
+                // @apply flex flex-col text-center;
+
+                &-title {
+                    margin-bottom: 2rem;
+                    font-weight: 700;
+                    font-size: 30px;
+                    position: relative;
+                    padding-bottom: 1rem;
+                }
+
+                &-address {
+                    @apply flex flex-row gap-x-2.5 mb-3 justify-center items-start content-start;
+
+                    div[inlinesvg] {
+                        ::ng-deep svg path {
+                            fill: #192A56;
+                        }
+                    }
+                }
+
+                &-phone {
+                    @apply mb-4 cursor-pointer;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 28px;
+                    color: #192A56;
+                }
+
+                &-email {
+                    @apply mb-4;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #424242;
+
+                    .highlight {
+                        @apply cursor-pointer;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 28px;
+                        color: #192A56;
+                        margin-bottom: 30px;
+                    }
+                }
+
+                &-follow-us {
+                    @apply mb-4;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #424242;
+                }
+
+                &-follow-icons {
+                    @apply flex flex-row justify-center gap-x-3.5 mb-3;
+                }
+            }
+        }
+    }
+
+    &-map {
+        border: #757575 10px solid;
+    }
+}
+
+@screen md {
+    .contact {
+        &-container {}
+
+        &-banner {
+            height: 543px;
+            background-image: url("/assets/images/investor-login.jpg");
+            background-position: center;
+            &:after {
+                @apply absolute bottom-0 left-0 right-0;
+                content: ' ';
+                height: 100px;
+                background: linear-gradient(180deg, #141414 0%, rgba(30, 30, 30, 0.278407) 69.85%, rgba(23, 23, 23, 0) 85.8%);
+                transform: matrix(1, 0, 0, -1, 0, 0);
+            }
+
+            &-description {
+                &-title {
+                    font-size: 48px;
+                    line-height: 70px;
+                }
+
+                &-sub_title {
+                    font-size: 48px;
+                    line-height: 70px;
+                }
+            }
+
+            &-card {
+                @apply mx-10;
+
+                &-form {
+                    @apply flex flex-col justify-center items-center content-center gap-5 pt-8;
+                }
+
+                &-detail {
+                    // @apply text-left;
+                    // flex-basis: 100%;
+
+                    // &-title {
+                    //     @apply mb-4;
+                    //     font-weight: 700;
+                    //     font-size: 22px;
+                    //     line-height: 34px;
+                    //     color: #fff;
+                    // }
+
+                    &-address {
+                        @apply justify-start;
+
+                        div[inlinesvg] {
+                            ::ng-deep svg path {}
+                        }
+                    }
+
+                    &-phone {}
+
+                    &-email {
+                        .highlight {}
+                    }
+
+                    &-follow-us {}
+
+                    &-follow-icons {
+                        @apply justify-start mb-8;
+                    }
+                }
+            }
+        }
+
+        &-map {}
+    }
+}
+
+@screen lg {
+    .contact {
+        &-container {}
+
+        &-banner {
+            height: 543px;
+            background-image: url("/assets/images/investor-login.jpg");
+
+            &:after {
+                height: 133px;
+            }
+
+            &-description {
+                &-title {
+                    font-size: 48px;
+                    line-height: 70px;
+                }
+
+                &-sub_title {
+                    font-size: 48px;
+                    line-height: 70px;
+                }
+            }
+
+            &-card {
+                @apply mx-[80px] top-[-110px] gap-x-10;
+
+                &-form {
+                    @apply border-0 gap-4 order-1 basis-6/12 pt-0;
+
+                    textarea {
+                        height: 140px;
+                    }
+                }
+
+                &-detail {
+                    // @apply text-left;
+                    // flex-basis: 100%;
+
+                    // &-title {
+                    //     @apply mb-7;
+                    //     font-weight: 700;
+                    //     font-size: 32px;
+                    // }
+
+                    &-address {
+                        div[inlinesvg] {
+                            ::ng-deep svg path {}
+                        }
+                    }
+
+                    &-phone {}
+
+                    &-email {
+                        .highlight {}
+                    }
+
+                    &-follow-us {}
+
+                    &-follow-icons {
+                        @apply justify-start mb-8;
+                    }
+                }
+            }
+        }
+
+        &-map {
+            border-width: 20px;
+        }
+    }
+}
+
+@screen xl {
+    .contact {
+        &-container {}
+
+        &-banner {
+
+            &-description {
+                &-title {}
+
+                &-sub_title {}
+            }
+
+            &-card {
+                // @apply mx-[80px] gap-x-8;
+
+                &-form {
+                    @apply gap-7 order-1 basis-6/12;
+
+                    textarea {
+                        height: 140px;
+                    }
+                }
+
+                &-detail {
+                    // @apply basis-6/12;
+                    // flex-basis: 100%;
+
+                    &-title {}
+
+                    &-address {
+                        div[inlinesvg] {
+                            ::ng-deep svg path {}
+                        }
+                    }
+
+                    &-phone {}
+
+                    &-email {
+                        .highlight {}
+                    }
+
+                    &-follow-us {}
+
+                    &-follow-icons {}
+                }
+            }
+        }
+
+        &-map {}
+    }
+}
+
+@screen xxl {
+    .contact {
+        &-container {}
+
+        &-banner {
+
+            &-description {
+                &-title {}
+
+                &-sub_title {}
+            }
+
+            &-card {
+                @apply mx-[140px] gap-x-20;
+
+                &-form {
+                    @apply gap-7 order-1 basis-6/12;
+
+                    textarea {
+                        height: 140px;
+                    }
+                }
+
+                &-detail {
+                    // @apply basis-6/12;
+                    // flex-basis: 100%;
+                    &-title {}
+
+                    &-address {
+                        div[inlinesvg] {
+                            ::ng-deep svg path {}
+                        }
+                    }
+
+                    &-phone {}
+
+                    &-email {
+                        .highlight {}
+                    }
+
+                    &-follow-us {}
+
+                    &-follow-icons {}
+                }
+            }
+        }
+
+        &-map {}
+    }
+}
+
+@screen xxxl {
+    .contact {
+        &-container {}
+
+        &-banner {
+
+            &-description {
+                &-title {}
+
+                &-sub_title {}
+            }
+
+            &-card {
+                @apply mx-auto gap-x-20 w-[1440px];
+
+                &-form {
+                    @apply gap-7 order-1 basis-6/12;
+                }
+
+                &-detail {
+                    // @apply basis-6/12;
+                    // flex-basis: 100%;
+
+                    &-title {}
+
+                    &-address {
+                        div[inlinesvg] {
+                            ::ng-deep svg path {}
+                        }
+                    }
+
+                    &-phone {}
+
+                    &-email {
+                        .highlight {}
+                    }
+
+                    &-follow-us {}
+
+                    &-follow-icons {}
+                }
+            }
+        }
+
+        &-map {}
+    }
+}
+
+.faq-h2 {
+    font-size: 1.5em;
+}
+
+
+.button-round {
+    background: #192A56;
+    border-radius: 70px;
+    width: 160px;
+    height: 42px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    @apply flex flex-row justify-center items-center content-center text-white;
+
+    @screen md {
+        height: 56px;
+        width: 180px;
+    }
+
+    @screen lg {
+        width: 200px;
+        height: 50px;
+
+    }
+}
+
+.description-title {
+    font-size: 30px;
+}
+
+input,
+textarea {
+    margin-bottom: 15px;
+    min-height: 50px;
+}
+
+.contact-banner-card-detail {
+    padding: 2rem 3rem 9rem 4rem;
+    color: #fff;
+    background-color: #192a56;
+}
+.investor-form{
+    margin-bottom: 5rem;
+    border-top-left-radius: 15% 20%;
+    border-top-right-radius: 15% 20%;
+    margin-top: -100px;
+    background: #fff;
+    padding-top: 2rem;
+}
+// form.w-100 {
+//     border-top-left-radius: 10% 50%;
+//     border-bottom-left-radius: 10% 50%;
+//     background-color: #fff;
+//     padding: 4rem ;
+// }
+
+// .contact-banner-card {
+//     background-color: #192a56;
+// }
+
+// .contact-banner-card-detail-title {
+//     position: relative;
+//     padding-bottom: 12px;
+// }
+
+.contact-banner-card-detail-title:after {
+    content: "";
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: auto;
+    width: 100px;
+    background-color: #fff;
+    height: 2px;
+}
+
+.or:before,
+.or:after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 1px;
+    background-color: #192a56;
+}
+
+.or::after {
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    left: 45px;
+}
+
+.or::before {
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    right: 45px;
+}
+
+.or {
+    margin: 10px 0px 6px 0px;
+    position: relative;
+}
+
+.or span {
+    background-color: #fff;
+    padding: 0px 10px;
+}
+
+.topsign_part .signin {
+    font-size: 18px;
+}
+
+.topsign_part {
+    justify-content: space-between;
+}
+.contact-banner-card-subtitle {
+    font-size: 1rem;
+}
+@media (min-width: 768px) {
+
+    input,
+    textarea {
+        min-height: 60px;
+    }
+}
+
+@media(max-width:1199px) {
+    form.w-100 {
+        padding: 4rem 2rem 0rem;
+    }
+}
+
+@media(max-width:1023px) {
+    .contact-banner-card {
+        background-color: #fff !important;
+    }
+
+    // .contact-banner-card-detail,
+    // .contact-banner-card-detail-title {
+    //     color: #192a56 !important;
+    // }
+
+    .contact-banner-card-detail-title {
+        font-size: 39px !important;
+    }
+
+    // .contact-banner-card-detail {
+    //     padding: 2rem !important;
+    // }
+
+    form.w-100 {
+        padding: 2rem;
+        padding-top: 0 !important;
+    }
+
+    .contact-banner-card-form {
+        padding-top: 0 !important;
+    }
+}
+
+@media(max-width: 768px) {
+    // .contact-banner-card-detail {
+    //     align-items: center;
+    // }
+
+    // .contact-banner-card-detail {
+    //     padding: 2rem 1rem !important;
+    // }
+
+    form.w-100 {
+        padding: 2rem 0rem;
+    }
+
+    // .topsign_part {
+    //     display: block !important;
+    // }
+    .topsign_part h2 {
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+
+    .or span {
+        position: relative;
+    }
+
+    .or::before,
+    .or::after {
+        content: "";
+        display: none;
+    }
+
+    .or span::before {
+        content: "";
+        right: 45px;
+    }
+
+    .or span::after {
+        content: "";
+        left: 45px;
+    }
+
+    .or span:before,
+    .or span:after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 1px;
+        background-color: #192a56;
+        top: 50%;
+    }
+    .contact-banner-card-detail-title {
+        font-size: 24px !important;
+    }
+    .investor-form{
+        margin-bottom: 1rem;
+        margin-top: 0rem;
+    }
+    .contact-banner-card-detail {
+        padding: 2rem 1rem;
+    }
+}

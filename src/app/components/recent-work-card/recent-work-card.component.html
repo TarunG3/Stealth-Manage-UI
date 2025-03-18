@@ -1,1 +1,13 @@
 <p>recent-work-card works!</p>
+<img class="property-image rounded" [lazyLoad]="site?.images?.[0]?.imageUrl" [alt]="site?.images?.[0]?.altText">
+
+<div class="card-details d-block">
+  <div style="align-items: start;" class="card-name d-flex mb-3">
+    <span [title]="site?.name">{{ site?.name | uppercase }}</span>
+  </div>
+
+  <a class="card-website mt-3 mb-2 mr-2" [routerLink]="'/property/'+site?.slug" (click)="selected.emit(site.slug)">
+    <span>More Info</span>
+    <div inlineSVG="/assets/icons/next-light.svg" [cacheSVG]="true"></div>
+  </a>
+</div>

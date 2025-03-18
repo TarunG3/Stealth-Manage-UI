@@ -1,0 +1,13 @@
+<section class="commitments pb-70 pt-100">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div *ngFor="let elem of api.commitmentData?.contents" class="col-lg-4 col-md-12">
+                <div class="commitment-article mb-4">
+                    <h3>{{elem?.title}}</h3>
+                    <p>{{elem?.description}}</p>
+                    <img [src]="elem?.image?.imageUrl" [alt]="elem?.image?.altText">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

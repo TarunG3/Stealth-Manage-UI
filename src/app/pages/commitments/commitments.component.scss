@@ -1,0 +1,298 @@
+.commitements {
+    &-container {
+        @apply bg-white;
+    }
+
+    &-banner {
+        @apply relative;
+        height: 343px;
+        background-image: url("/assets/images/comitments.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-position: center;
+        object-fit: cover;
+        background-position: center;
+        &-description {
+            @apply absolute text-white w-full h-full text-center flex flex-col justify-center content-center items-center;
+            background: rgba(0, 0, 0, 0.4);
+
+            &-title {
+                font-size: 35px;
+                padding: 0px 1rem;
+            }
+
+            &-sub_title {
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 34px;
+            }
+        }
+    }
+
+    &-blog {
+        &-container {
+            @apply mt-4 mb-[60px] flex flex-row flex-wrap mx-4 gap-4;
+        }
+
+        &-card {
+            @apply flex flex-col basis-full w-full px-2.5 pt-2.5 bg-white pb-4;
+            border-radius: 4px;
+            border: 1px solid #E8E8E8;
+
+            img {
+                object-fit: cover;
+                object-position: center;
+                border-radius: 4px;
+            }
+
+            &-details {
+                @apply flex flex-col;
+            }
+
+            &-name {
+                @apply flex flex-row items-center content-center mt-2;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 28px;
+
+                span {
+                    @apply ml-3;
+                    font-size: 14px;
+                    line-height: 28px;
+                    color: #192A56;
+                }
+            }
+
+            &-website {
+                @apply flex flex-row items-center content-center mt-2;
+
+                span {
+                    @apply mr-2;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 32px;
+                    color: #5D5D5D;
+                }
+
+                div[inlinesvg] {
+                    ::ng-deep svg {
+                        fill: #5D5D5D;
+                        height: 24px;
+                        width: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@screen md {
+    .commitements {
+        &-container {}
+
+        &-banner {
+            @apply relative;
+            height: 543px;
+            background-image: url("/assets/images/comitments.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-position: center;
+            object-fit: cover;
+            background-position: top;
+            &:after {
+                @apply absolute bottom-0 left-0 right-0;
+                content: ' ';
+                height: 100px;
+                background: linear-gradient(180deg, #141414 0%, rgba(30, 30, 30, 0.278407) 69.85%, rgba(23, 23, 23, 0) 85.8%);
+                transform: matrix(1, 0, 0, -1, 0, 0);
+            }
+
+            &-description {
+                @apply absolute text-white w-full h-full text-center flex flex-col justify-center content-center items-center;
+                background: rgba(0, 0, 0, 0.4);
+
+                &-title {
+                    font-size: 48px;
+                    line-height: 70px;
+                }
+
+                &-sub_title {
+                    font-weight: 700;
+                    font-size: 48px;
+                    line-height: 70px;
+                }
+            }
+        }
+
+        &-blog {
+            &-container {
+                @apply mt-[41px] mb-[100px] flex flex-row flex-wrap mx-10 gap-7;
+            }
+
+            &-card {
+                @apply flex flex-col basis-[calc(50%-30px)] w-[calc(100%-30px)] px-2.5 pt-2.5 bg-white pb-4;
+                border-radius: 4px;
+                border: 1px solid #E8E8E8;
+
+                img {
+                    min-height: 435px;
+                    min-width: 307px;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 4px;
+                }
+
+                &-details {
+                    @apply flex flex-col;
+                }
+
+                &-name {
+                    @apply flex flex-row items-center content-center mt-4;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 32px;
+
+                    span {
+                        @apply ml-5;
+                        font-size: 20px;
+                        line-height: 32px;
+                        width: 200px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        color: #192A56;
+                    }
+                }
+
+                &-website {
+                    @apply flex flex-row items-center content-center mt-4;
+
+                    span {
+                        @apply mr-2;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 32px;
+                        color: #5D5D5D;
+                    }
+
+                    div[inlinesvg] {
+                        ::ng-deep svg {
+                            fill: #5D5D5D;
+                            height: 30px;
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@screen lg {
+    .commitements {
+        &-container {}
+
+        &-banner {
+            @apply w-[100%] flex justify-center;
+            height: 543px;
+            background-image: url("/assets/images/comitments.jpg");
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+
+            &:after {
+                height: 133px;
+            }
+        }
+
+        &-blog {
+            &-container {
+                @apply mt-[46px] mx-8 gap-8;
+            }
+
+            &-card {
+                @apply basis-[calc(50%-32px)] w-[calc(100%-32px)] px-3.5 pt-3.5 pb-4;
+
+                img {
+                    width: 100%;
+                    min-height: 435px;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 4px;
+                }
+
+                &-details {
+                    @apply flex flex-row justify-between;
+                }
+
+                &-name {
+                    span {
+                        @apply ml-5;
+                        font-size: 20px;
+                        line-height: 32px;
+                        width: 250px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        color: #192A56;
+                    }
+                }
+
+                &-website {
+                    @apply flex flex-row items-center content-center mt-4;
+
+                    span {
+                        @apply mr-2;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 32px;
+                        color: #5D5D5D;
+                    }
+
+                    div[inlinesvg] {
+                        ::ng-deep svg {
+                            fill: #5D5D5D;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@screen xxl {
+    .commitements {
+        &-container {}
+
+        &-banner {}
+
+        &-blog {
+            &-container {}
+
+            &-card {
+
+                img {}
+
+                &-details {}
+
+                &-name {
+                    span {
+                        width: 100%;
+                        overflow: unset;
+                        text-overflow: unset;
+                        white-space: unset;
+                    }
+                }
+
+                &-website {
+                    span {}
+
+                    div[inlinesvg] {
+                        ::ng-deep svg {}
+                    }
+                }
+            }
+        }
+    }
+}
